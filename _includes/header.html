@@ -1,8 +1,31 @@
-<nav class="header w-100 bg-primary">
-    <div class="w-100 border-bottom" style="height: 65%">
-
+<nav class="header w-100 bg-primary d-flex flex-column">
+    <div class="w-100 border-bottom" style="height: 65%;">
+        <div class="m-auto content h-100 d-flex">
+            <div class="logo user-select-none flex-none justify-column-center">
+                <a class="text-decoration-none" href="/">
+                    {{ site.title }}
+                </a>
+            </div>
+            <div class="search-box flex-auto justify-column-center">
+                <form action="/">
+                    <label>
+                        <input class="" type="text" />
+                        <button type="submit"><i class="fas fa-magic"></i></button>
+                    </label>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="w-100" style="height: 35%">
-
+    <div class="w-100">
+        <div class="m-auto content">
+            <div class="d-inline-block h-100">
+                <ul>
+                    <li class="active"><a href="/">posts</a></li>
+                    <li><a href="/">tags</a></li>
+                    <li><a href="/">categories</a></li>
+                    <li><a href="/">about</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </nav>

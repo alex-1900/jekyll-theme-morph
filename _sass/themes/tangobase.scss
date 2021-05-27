@@ -45,5 +45,8 @@ $colors: (
   "primary-dark": map-get($_shadow, "paper"),
   "secondary-light": map-get($_highlight, "slate"),
   "secondary": map-get($_middle, "slate"),
-  "secondary-dark": map-get($_shadow, "slate")
+  "secondary-dark": map-get($_shadow, "slate"),
+  "link-light": map-get($_highlight, "skyblue"),
+  "link": map-get($_middle, "skyblue"),
+  "link-dark": map-get($_shadow, "skyblue"),
 ) !default;
