@@ -126,7 +126,7 @@ input {
     font-size: 28px;
     padding: 0 12px;
     a {
-      font-family: "Cormorant Garamond", Courier, serif;
+      font-family: Arial,PingFangSC-Regular,"Microsoft YaHei-Regular","Microsoft YaHei";
       font-weight: bold;
       color: #204a87;
       &:hover {
@@ -135,7 +135,7 @@ input {
     }
   }
   .search-box {
-    margin-left: 30px;
+    margin-left: 15px;
     label {
       input {
         font-size: 13px;
@@ -166,7 +166,7 @@ input {
         border-left: 0;
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
-        padding: 6px 10px;
+        padding: 6px 8px;
         margin-left: -5px;
         color: map-get($colors, "secondary");
         cursor: pointer;
@@ -177,15 +177,20 @@ input {
   ul {
     padding: 0 12px;
     line-height: 250%;
+    overflow-x: auto;
+    white-space: nowrap;
+    overflow-y: hidden;
+    &::-webkit-scrollbar {
+      display:none !important;
+    }
     li {
-      display: inline-block;
       list-style-type: none;
       margin-right: 25px;
-      &.active {
-        a {
-          font-weight: bold;
-        }
-      }
+      //&.active {
+      //  a {
+      //    font-weight: bold;
+      //  }
+      //}
       a {
         color: #614e3c;
         text-decoration: none;
