@@ -22,9 +22,20 @@ $grays: (
   "900": $gray-900
 ) !default;
 
+$colors: (
+  "primary": $gray-300,
+  "primary-dark": $gray-400,
+  "secondary": $white
+) !default;
+
 // .color-gray-[level]
 // .bg-gray-[level]
 @each $key, $value in $grays {
   .color-gray-#{$key} {color: $value}
   .bg-gray-#{$key} {background-color: $value}
+}
+
+@each $key, $value in $colors {
+  .color-#{$key} {color: $value}
+  .bg-#{$key} {background-color: $value}
 }

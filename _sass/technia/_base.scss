@@ -1,9 +1,16 @@
+@import "colors";
+@import "variables";
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  background-color: white;
 }
 
 html {
@@ -14,4 +21,8 @@ html {
   @media (min-width: 600px) {
     font-size: 16px;
   }
+}
+
+.border-bottom {
+  border-bottom: 1px solid map-get($colors, "primary-dark");
 }

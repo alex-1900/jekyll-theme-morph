@@ -1,5 +1,6 @@
 // scss-docs-start color-variables
-$highlight: (
+$_highlight: (
+  "paper": #fdfdf7,
   "aluminium": #eeeeec,
   "butter": #fce94f,
   "chameleon": #8ae234,
@@ -11,7 +12,8 @@ $highlight: (
   "red": #ef2929
 ) !default;
 
-$middle: (
+$_middle: (
+  "paper": #f6f6f1,
   "aluminium": #d3d7cf,
   "butter": #edd400,
   "chameleon": #73d216,
@@ -23,7 +25,8 @@ $middle: (
   "red": #cc0000
 ) !default;
 
-$shadow: (
+$_shadow: (
+  "paper": #e9e9e2,
   "aluminium": #babdb6,
   "butter": #c4a000,
   "chameleon": #4e9a06,
@@ -35,4 +38,12 @@ $shadow: (
   "red": #a40000
 ) !default;
 
-$parchment: #f6f6f1 !default;
+// Build colors
+$colors: (
+  "primary-light": map-get($_highlight, "paper"),
+  "primary": map-get($_middle, "paper"),
+  "primary-dark": map-get($_shadow, "paper"),
+  "secondary-light": map-get($_highlight, "slate"),
+  "secondary": map-get($_middle, "slate"),
+  "secondary-dark": map-get($_shadow, "slate")
+) !default;
