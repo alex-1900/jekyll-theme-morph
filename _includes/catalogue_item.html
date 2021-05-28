@@ -16,11 +16,11 @@
             {% endif %}
         </span>
     </div>
-    <p>
+    <p class="color-secondary">
         {% if post.excerpt_separator %}
             {{ post.excerpt | strip_html }}
         {% else %}
-            {{ post.content | strip_html | truncate: 150 }}
+            {{ post.content | strip_html | truncate: 230 }}
         {% endif %}
     </p>
     <div class="categories">

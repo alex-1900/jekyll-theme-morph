@@ -32,16 +32,11 @@ github_username:  jekyll
 #theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-paginate-v2
+  - jekyll-paginate
   - jekyll-seo-tag
 
 # Pagination Settings
-pagination:
-  enabled: true
-  per_page: 4
-  limit: 0
-  sort_field: 'date'
-  sort_reverse: true
+paginate: 3
 
 # Assets
 sass:

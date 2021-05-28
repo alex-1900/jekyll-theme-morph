@@ -1,16 +1,30 @@
 @import "technia/functions";
+@import "technia/colors";
 @import "technia/components/catalogue-item";
+@import "technia/components/paginator";
 
 .page-home {
   .left {
-    width: 54%;
+    width: 59%;
     @include media-sm() {
       width: 100%;
     }
   }
 
   .right {
-    width: 45%;
+    width: 40%;
+    padding: 10px 0;
+    h2 {
+      font-size: 1.2rem;
+      padding: 10px 0;
+      border-bottom: 1px dashed $gray-400;
+    }
+    .tags-box {
+      padding: 1rem 0;
+      a {
+        margin-top: .5rem;
+      }
+    }
     @include media-sm() {
       width: 100%;
     }

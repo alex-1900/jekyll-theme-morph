@@ -1,7 +1,7 @@
 @import "../variables";
 
 .catalogue-item {
-  padding: 1rem .7rem 0 .7rem;
+  padding: 1rem .7rem;
   &:not(:first-child) {
     border-top: 1px dashed $gray-300;
   }
@@ -10,7 +10,7 @@
   }
 
   h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding-bottom: 4px;
   }
   time, .categories {

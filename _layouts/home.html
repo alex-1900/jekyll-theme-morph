@@ -16,24 +16,34 @@ layout: default
                 {% endfor %}
             </div>
             <!-- Pagination links -->
-            {% if paginator.total_pages > 1 %}
-            <ul class="pager">
-                {% if paginator.previous_page %}
-                <li class="previous">
-                    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-                </li>
-                {% endif %}
-                {% if paginator.next_page %}
-                <li class="next">
-                    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-                </li>
-                {% endif %}
-            </ul>
-            {% endif %}
+            {% include paginator.html %}
         </div>
 
         <div class="right flex-sm-none">
-            zxczxc
+            <div class="w-100">
+                <h2 class="d-flex color-secondary">
+                    <p class="flex-grow-1"><i class="fas fa-tag"></i> Hot tags</p>
+                    <a class="fw-normal" href="/">
+                        <span style="font-size: .9rem">show more »</span>
+                    </a>
+                </h2>
+                <div class="tags-box">
+                    {% for tag in site.tags %}
+                    <a class="flat" href="#{{ tag[0] }}">{{ tag[0] }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="w-100" style="padding-top: 1rem">
+                <h2 class="d-flex color-secondary">
+                    <p class="flex-grow-1"><i class="far fa-file-pdf"></i> popular articles</p>
+                </h2>
+                <div class="tags-box">
+                    {% for category in site.categories %}
+                    <a class="flat" href="#{{ category[0] }}">{{ category[0] }}</a>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
     </div>
 </div>
