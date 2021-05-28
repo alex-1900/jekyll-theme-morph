@@ -1,0 +1,19 @@
+@import "../variables";
+
+.catalogue-item {
+  padding: 1rem .7rem 0 .7rem;
+  &:not(:first-child) {
+    border-top: 1px dashed $gray-300;
+  }
+  h3, p, .categories {
+    padding: 10px 0;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    padding-bottom: 4px;
+  }
+  time, .categories {
+    font-size: .7rem;
+  }
+}

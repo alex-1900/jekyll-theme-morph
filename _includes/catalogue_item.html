@@ -1,0 +1,31 @@
+<div class="catalogue-item">
+    <h3 class="fw-normal"><a class="color-link-dark" href="">{{ post.title }}</a></h3>
+    <div class="d-flex">
+        <span class="w-100 text-start">
+            <time datetime="{{ post.date }}" class="d-inline-block fw-light color-secondary-light">
+                <i class="far fa-calendar-alt color-rang1"></i> {{ post.date | date: "%b %d, %y" }}
+            </time>
+            &nbsp;
+            <time datetime="{{ post.date }}" class="d-inline-block fw-light color-secondary-light">
+                <i class="far fa-clock color-rang2"></i> {{ post.date | date: "%H:%M" }}
+            </time>
+        </span>
+        <span class="w-100 text-end">
+            {% if include.sticky == 'true' %}
+                <i class="fas fa-thumbtack color-gray-400"></i>
+            {% endif %}
+        </span>
+    </div>
+    <p>
+        {% if post.excerpt_separator %}
+            {{ post.excerpt | strip_html }}
+        {% else %}
+            {{ post.content | strip_html | truncate: 150 }}
+        {% endif %}
+    </p>
+    <div class="categories">
+        {% for category in post.categories %}
+        <a class="flat" href="">{{ category }}</a>
+        {% endfor %}
+    </div>
+</div>

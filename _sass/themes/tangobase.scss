@@ -49,4 +49,7 @@ $colors: (
   "link-light": map-get($_highlight, "skyblue"),
   "link": map-get($_middle, "skyblue"),
   "link-dark": map-get($_shadow, "skyblue"),
+  "rang1": map-get($_highlight, "chocolate"),
+  "rang2": map-get($_middle, "plum"),
+  "logo": map-get($_shadow, "skyblue")
 ) !default;

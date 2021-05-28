@@ -1,7 +1,9 @@
+@import "technia/variables";
 // Color theme
 @import "themes/tangobase";
-
 @import "technia/colors";
-@import "technia/variables";
+@import "technia/utilities";
 @import "technia/base";
-@import "technia/header";
+@import "technia/components/header";
+
+@import "home";

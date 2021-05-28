@@ -1,0 +1,167 @@
+@import "variables";
+@import "functions";
+
+$utilities: () !default;
+
+$utilities: map-merge(
+  (
+    "align": (
+      property: vertical-align,
+      class: align,
+      values: baseline top middle bottom text-bottom text-top
+    ),
+    "float": (
+      property: float,
+      class: float,
+      values: (
+        start: left,
+        end: right,
+        none: none,
+      )
+    ),
+    "overflow": (
+      property: overflow,
+      class: overflow,
+      values: auto hidden visible scroll,
+    ),
+    "display": (
+      property: display,
+      class: d,
+      values: inline inline-block block grid table table-row table-cell flex inline-flex none
+    ),
+    "flex": (
+      property: flex,
+      class: flex,
+      values: 1 auto none
+    ),
+    "flex-grow": (
+      property: flex-grow,
+      class: flex,
+      values: (
+        grow-0: 0,
+        grow-1: 1,
+      )
+    ),
+    "flex-direction": (
+      responsive: true,
+      property: flex-direction,
+      class: flex,
+      values: row column row-reverse column-reverse
+    ),
+    "justify-content": (
+      property: justify-content,
+      class: justify-content,
+      values: (
+        start: flex-start,
+        end: flex-end,
+        center: center,
+        between: space-between,
+        around: space-around,
+        evenly: space-evenly,
+      )
+    ),
+    "align-items": (
+      property: align-items,
+      class: align-items,
+      values: (
+        start: flex-start,
+        end: flex-end,
+        center: center,
+        baseline: baseline,
+        stretch: stretch,
+      )
+    ),
+    "align-content": (
+      property: align-content,
+      class: align-content,
+      values: (
+        start: flex-start,
+        end: flex-end,
+        center: center,
+        between: space-between,
+        around: space-around,
+        stretch: stretch,
+      )
+    ),
+    "align-self": (
+      property: align-self,
+      class: align-self,
+      values: (
+        auto: auto,
+        start: flex-start,
+        end: flex-end,
+        center: center,
+        baseline: baseline,
+        stretch: stretch,
+      )
+    ),
+    "font-weight": (
+      property: font-weight,
+      class: fw,
+      values: (
+        light: $font-weight-light,
+        lighter: $font-weight-lighter,
+        normal: $font-weight-normal,
+        bold: $font-weight-bold,
+        bolder: $font-weight-bolder
+      )
+    ),
+    "text-align": (
+      property: text-align,
+      class: text,
+      values: (
+        start: left,
+        end: right,
+        center: center,
+      )
+    ),
+    "text-decoration": (
+      property: text-decoration,
+      class: text-decoration,
+      values: none underline line-through
+    ),
+    "user-select": (
+      property: user-select,
+      class: user-select,
+      values: all auto none
+    ),
+    "margin": (
+      property: margin,
+      class: m,
+      values: (auto: auto)
+    ),
+    "white-space": (
+      property: white-space,
+      class: white-space,
+      values: normal nowrap pre pre-wrap pre-line break-spaces
+    ),
+    "cursor": (
+      property: cursor,
+      class: cursor,
+      values: default pointer auto text crosshair move help wait
+    )
+  ),
+  $utilities
+);
+
+// Build utilities
+@include media($utilities);
+@each $key in map-keys($grid-breakpoints) {
+  @if $key == 'xs' {
+    @include media-xs() {
+      @include media($utilities, -#{$key})
+    }
+  }
+
+  @if $key == 'sm' {
+    @include media-sm() {
+      @include media($utilities, -#{$key})
+    }
+  }
+
+  @if $key == 'md' {
+    @include media-md() {
+      @include media($utilities, -#{$key})
+    }
+  }
+}

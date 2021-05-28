@@ -1,0 +1,57 @@
+@import "variables";
+
+// Functions
+@mixin media-xs() {
+  @media
+    (max-width: map-get($grid-breakpoints, 'xs'))
+  {
+    @content;
+  }
+}
+
+@mixin media-sm() {
+  @media
+    (max-width: map-get($grid-breakpoints, 'sm'))
+  {
+    @content;
+  }
+}
+
+@mixin media-md() {
+  @media
+    (max-width: map-get($grid-breakpoints, 'md'))
+  {
+    @content;
+  }
+}
+
+@mixin media($utilities, $infix: '') {
+  @each $utility in map-values($utilities) {
+    $p: map-get($utility, "property");
+    $c: map-get($utility, "class");
+    $values: map-get($utility, "values");
+
+    @if type-of($values) == "map" {
+      @each $k, $v in $values {
+        .#{$c}#{$infix}-#{$k} {
+          #{$p}: $v
+        }
+      }
+    }
+    @else {
+      @each $v in $values {
+        .#{$c}#{$infix}-#{$v} {
+          #{$p}: $v
+        }
+      }
+    }
+  }
+}
+
+@function tint-color($color, $weight) {
+  @return mix(white, $color, $weight);
+}
+
+@function shade-color($color, $weight) {
+  @return mix(black, $color, $weight);
+}
