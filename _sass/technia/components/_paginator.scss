@@ -1,0 +1,19 @@
+@import "../colors";
+
+.pagination {
+  padding: 2rem 0;
+  a, span, em {
+    display: inline-block;
+    color: map-get($colors, "secondary-light");
+    padding: .4rem .8rem;
+    background-color: #f6f6f1;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 4px;
+  }
+
+  em {
+    color: map-get($colors, "secondary-dark");
+    font-style: normal;
+  }
+}

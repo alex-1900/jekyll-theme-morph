@@ -1,5 +1,6 @@
-@import "technia/functions";
+@import "technia/variables";
 @import "technia/colors";
+@import "technia/functions";
 @import "technia/components/catalogue-item";
 @import "technia/components/paginator";
 
@@ -13,20 +14,44 @@
 
   .right {
     width: 40%;
-    padding: 10px 0;
-    h2 {
+    padding: 10px 0 10px 3rem;
+
+    .title {
       font-size: 1.2rem;
       padding: 10px 0;
       border-bottom: 1px dashed $gray-400;
     }
-    .tags-box {
+
+    .list-container {
       padding: 1rem 0;
-      a {
-        margin-top: .5rem;
+      li {
+        list-style-type: none;
+        a.hover-color-reversal:hover {
+          background-color: map-get($colors, "link");
+          color: white;
+        }
+        &.horizontal {
+          display: inline-block;
+          margin-top: .5rem;
+        }
+        &.hover-primary:hover {
+          background-color: map-get($colors, 'primary');
+          a.hover-border {
+            border: 1px solid map-get($colors, 'primary-dark');
+            position: relative;
+            left: 1px;
+          }
+        }
       }
     }
+
+    .item:not(:first-child) {
+      padding-top: 1rem;
+    }
+
     @include media-sm() {
       width: 100%;
+      padding-left: 0;
     }
   }
 }

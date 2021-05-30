@@ -17,6 +17,7 @@
 html {
   font-family: $serif-primary;
   font-size: 14px;
+  -webkit-text-size-adjust: 100%;
 }
 
 a {
@@ -24,12 +25,14 @@ a {
   text-decoration: none;
 
   &.flat {
-    color: map-get($colors, "link-light");;
-    background-color: #f5f5f5;
-    border-radius: 5px;
-    padding: 4px 6px;
+    display: inline-block;
+    color: map-get($colors, "link-light");
+    //background-color: #f5f5f5;
+    background-color: map-get($colors, "primary");
+    //border-radius: 5px;
+    padding: 4px 8px;
     &:hover {
-      background-color: $gray-200;
+      background-color: map-get($colors, "primary-dark");
     }
   }
 }
@@ -47,6 +50,17 @@ input {
 .content {
   max-width: $content-max-width;
   padding: 0 10px;
+}
+
+@keyframes fade-in {
+  0% {opacity: 0;}
+  40% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@-webkit-keyframes fade-in {
+  0% {opacity: 0;}
+  40% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
 .w-100 {

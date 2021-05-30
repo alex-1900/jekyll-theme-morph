@@ -24,6 +24,7 @@ description: the technia
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 lang: zh
+domain: your-domain.com
 
 # Accounts
 github_username:  jekyll
@@ -35,13 +36,30 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
 
+# Build settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    block:
+      line_numbers: true
+      start_line: 1
+
+linenos: true
+
 # Pagination Settings
-paginate: 3
+paginate: 6
+permalink: /:year/:month/:day/:title.markdown
 
 # Assets
 sass:
   sass_dir:     _sass
   style:        compressed
+
+include: ['_pages']
 
 # Exclude from processing.
 # The following items will not be processed, by default.

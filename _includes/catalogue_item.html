@@ -1,5 +1,5 @@
 <div class="catalogue-item">
-    <h3 class="fw-normal"><a class="color-link-dark" href="">{{ post.title }}</a></h3>
+    <h3 class="fw-normal"><a class="color-link-dark" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
     <div class="d-flex">
         <span class="w-100 text-start">
             <time datetime="{{ post.date }}" class="d-inline-block fw-light color-secondary-light">

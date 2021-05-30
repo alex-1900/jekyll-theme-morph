@@ -43,7 +43,6 @@ $utilities: map-merge(
       )
     ),
     "flex-direction": (
-      responsive: true,
       property: flex-direction,
       class: flex,
       values: row column row-reverse column-reverse

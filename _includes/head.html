@@ -1,19 +1,38 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {% seo %}
+{% seo %}
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+<!-- CSS -->
+<link rel="stylesheet" href="{{ "/assets/style/main.css" | relative_url }}">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/favicon-32x32.png" | relative_url }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/favicon-16x16.png" | relative_url }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/apple-touch-icon.png" | relative_url }}">
-    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/favicon-32x32.png" | relative_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/favicon-16x16.png" | relative_url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/apple-touch-icon.png" | relative_url }}">
+<link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
-    <!-- RSS -->
-    {% feed_meta %}
+<!-- for layouts -->
+{% if layout.name == 'post' %}
+<link rel="stylesheet" href="{{ "/assets/style/railscasts.css" | relative_url }}">
+<link rel="stylesheet" href="{{ "/assets/style/post.css" | relative_url }}">
+<script src="{{ "/assets/javascript/post.js" | relative_url }}"></script>
+{% endif %}
 
-</head>
+<!-- for pages -->
+{% if page.class == 'search' %}
+<link rel="stylesheet" href="{{ "/assets/style/search.css" | relative_url }}">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simple-jekyll-search/1.9.2/simple-jekyll-search.min.js"></script>
+<script src="{{ "/assets/javascript/search.js" | relative_url }}"></script>
+{% endif %}
+
+{% if page.class == 'home' %}
+<link rel="stylesheet" href="{{ "/assets/style/home.css" | relative_url }}">
+{% endif %}
+
+{% if page.class == 'classify' %}
+<link rel="stylesheet" href="{{ "/assets/style/classify.css" | relative_url }}">
+{% endif %}
+
+<!-- RSS -->
+{% feed_meta %}

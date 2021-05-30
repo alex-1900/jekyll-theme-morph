@@ -1,0 +1,14 @@
+<div class="catalogue-item">
+    <h3 class="fw-normal"><a class="color-link-dark" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+    <div class="d-flex">
+        <span class="w-100 text-start">
+            <time datetime="{{ post.date }}" class="d-inline-block fw-light color-secondary-light">
+                <i class="far fa-calendar-alt color-rang1"></i> {{ post.date | date: "%b %d, %y" }}
+            </time>
+            &nbsp;
+            <time datetime="{{ post.date }}" class="d-inline-block fw-light color-secondary-light">
+                {{ post.date | date: "%H:%M" }}
+            </time>
+        </span>
+    </div>
+</div>

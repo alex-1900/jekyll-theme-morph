@@ -1,0 +1,43 @@
+@import "technia/colors";
+@import "technia/functions";
+@import "technia/components/catalogue-item";
+
+.page-classify {
+  &, header.header {
+    padding: 2rem 0;
+  }
+  font-size: 1.2rem;
+
+  .container {
+    width: 50%;
+    @include media-sm() {
+      width: 100%;
+    }
+    border-left: 3px solid map-get($colors, 'link-light');
+    padding: 1rem;
+    .component-tag {
+      margin: .5rem;
+      color: map-get($colors, 'link-light');
+    }
+  }
+
+  .archive-box {
+    padding: 1rem 0;
+    &:not(:last-child) {
+      border-bottom: 1px dashed map-get($colors, 'primary-dark');
+    }
+    .title {
+      font-size: 1.3rem;
+      padding: .5rem 0;
+    }
+    .menu-box {
+      border-left: 1px dashed map-get($colors, 'primary-dark');
+    }
+  }
+
+  .component-tag {
+    background-color: map-get($colors, 'primary');
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+}

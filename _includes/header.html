@@ -7,10 +7,10 @@
                 </a>
             </div>
             <div class="search-box flex-auto d-flex flex-column justify-content-center">
-                <form action="/">
-                    <label>
-                        <input class="" type="text" />
-                        <button class="cursor-pointer" type="submit">
+                <form action="{{ '/search' | prepend: site.baseurl }}" id="header-search-form" class="search">
+                    <label class="search-wrap d-flex flex-none">
+                        <input name="words" class="search-input flex-grow-1" id="header-search-input" type="text" />
+                        <button class="search-button cursor-pointer" type="submit">
                             <i class="fas fa-arrow-right"></i>
                         </button>
                     </label>
@@ -18,18 +18,27 @@
             </div>
         </div>
     </div>
-    <div>
+    <div class="nav-bar bg-primary">
         <div class="m-auto content">
             <div>
                 <ul class="white-space-nowrap">
-                    <li class="d-inline-block active"><a href="/">posts</a></li>
-                    <li class="d-inline-block"><a href="/">tags</a></li>
-                    <li class="d-inline-block"><a href="/">categories</a></li>
-                    <li class="d-inline-block"><a href="/">calendar</a></li>
-                    <li class="d-inline-block"><a href="/">about</a></li>
-                    <li class="d-inline-block"><a href="/">links</a></li>
+                    <li class="d-inline-block active"><a href="{{ '/' | site.baseurl }}">posts</a></li>
+                    <li class="d-inline-block"><a href="{{ '/tags' | site.baseurl }}">tags</a></li>
+                    <li class="d-inline-block"><a href="{{ '/categories' | site.baseurl }}">categories</a></li>
+                    <li class="d-inline-block"><a href="{{ '/about' | prepend: site.baseurl }}">about</a></li>
+                    <li class="d-inline-block"><a href="{{ '/search' | prepend: site.baseurl }}">search</a></li>
                 </ul>
             </div>
         </div>
     </div>
 </nav>
+
+<script>
+    var headerSearchForm = document.getElementById('header-search-form')
+    var headerSearchInput = document.getElementById('header-search-input')
+    headerSearchForm.onsubmit = function (event) {
+        event.preventDefault()
+        var words = headerSearchInput.value
+        window.location.href = headerSearchForm.action + '?words=' + encodeURIComponent(words)
+    }
+</script>

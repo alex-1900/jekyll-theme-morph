@@ -1,16 +1,11 @@
 ---
 layout: default
+template: home
 ---
 <div class="page-home">
     <div class="content m-auto d-flex d-sm-block">
         <div class="left flex-sm-none">
             <div class="catalogue">
-                {% for post in site.posts %}
-                    {% if post.sticky %}
-                        {% include catalogue_item.html sticky='true' post=post %}
-                    {% endif %}
-                {% endfor %}
-
                 {% for post in paginator.posts %}
                     {% include catalogue_item.html post=post %}
                 {% endfor %}
@@ -20,29 +15,32 @@ layout: default
         </div>
 
         <div class="right flex-sm-none">
-            <div class="w-100">
-                <h2 class="d-flex color-secondary">
-                    <p class="flex-grow-1"><i class="fas fa-tag"></i> Hot tags</p>
+            <div class="w-100 item">
+                <h2 class="d-flex color-secondary title">
+                    <p class="flex-grow-1"><i class="far fa-file-pdf"></i> Trending Articles</p>
+                </h2>
+                <ul class="list-container">
+                    {% assign sticky_index = 0 %}
+                    {% for post in site.posts %}
+                        {% if post.sticky %}
+                            {% assign sticky_index = sticky_index | plus:1 %}
+                            {% include list-row.html post=post index=sticky_index  %}
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="w-100 item">
+                <h2 class="d-flex color-secondary title">
+                    <p class="flex-grow-1"><i class="fas fa-tag"></i> Trending Tags</p>
                     <a class="fw-normal" href="/">
                         <span style="font-size: .9rem">show more »</span>
                     </a>
                 </h2>
-                <div class="tags-box">
+                <ul class="list-container">
                     {% for tag in site.tags %}
-                    <a class="flat" href="#{{ tag[0] }}">{{ tag[0] }}</a>
+                    <li class="horizontal"><a class="flat" href="#{{ tag[0] }}">{{ tag[0] }}</a></li>
                     {% endfor %}
-                </div>
-            </div>
-
-            <div class="w-100" style="padding-top: 1rem">
-                <h2 class="d-flex color-secondary">
-                    <p class="flex-grow-1"><i class="far fa-file-pdf"></i> popular articles</p>
-                </h2>
-                <div class="tags-box">
-                    {% for category in site.categories %}
-                    <a class="flat" href="#{{ category[0] }}">{{ category[0] }}</a>
-                    {% endfor %}
-                </div>
+                </ul>
             </div>
         </div>
     </div>
