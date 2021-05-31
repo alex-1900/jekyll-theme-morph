@@ -1,12 +1,17 @@
 @import "technia/colors";
 @import "technia/functions";
-@import "technia/components/catalogue-item";
+@import "technia/components/post-info";
 
 .page-classify {
-  &, header.header {
-    padding: 2rem 0;
-  }
   font-size: 1.2rem;
+
+  &, header.header {
+    padding: 2rem 0 0 0;
+  }
+
+  .custom-area {
+    padding: 1rem 0;
+  }
 
   .container {
     width: 50%;

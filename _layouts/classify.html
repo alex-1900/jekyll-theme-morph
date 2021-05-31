@@ -1,0 +1,53 @@
+---
+layout: page
+---
+{% assign sources = "tags,categories" | split:"," %}
+{% if sources contains page.source %}
+
+{% if page.source == 'tags' %}
+    {% assign title = 'Tags' %}
+    {% assign fws_class = 'fas fa-tags' %}
+{% else %}
+    {% assign title = 'Categories' %}
+    {% assign fws_class = 'far fa-folder-open' %}
+{% endif %}
+
+<div class="page-classify">
+    <div>
+        {% assign paths = 'Page' %}
+        {% include bread-bar.html paths=paths  %}
+    </div>
+    <header class="header">
+        <h1 class="color-secondary fw-normal">
+            <i class="{{ fws_class }}"></i> {{ title }}
+        </h1>
+    </header>
+    <div class="custom-area">
+        {{ content }}
+    </div>
+    <div class="container">
+        {% for data in site[page.source] %}
+        <a href="#{{ data[0] }}" class="component-tag d-inline-block">
+            {{ data[0] }}
+        </a>
+        {% endfor %}
+    </div>
+    <div>
+        {% for data in site[page.source] %}
+        <div id="{{ data[0] }}" class="archive-box color-secondary">
+            <h3 class="title">
+                <i class="fas fa-circle color-link-light" style="font-size:.7rem"></i>
+                {{ data[0] }}
+            </h3>
+            <div class="menu-box">
+                {% for post in data[1] %}
+                {% include simple-post-info.html post=post  %}
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% else %}
+{{ content }}
+{% endif %}

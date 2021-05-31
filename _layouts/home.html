@@ -1,17 +1,23 @@
 ---
 layout: default
-template: home
 ---
 <div class="page-home">
+    {% if site.paginate %}
+        {% assign posts = paginator.posts %}
+    {% else %}
+        {% assign posts = site.posts %}
+    {% endif %}
     <div class="content m-auto d-flex d-sm-block">
         <div class="left flex-sm-none">
             <div class="catalogue">
-                {% for post in paginator.posts %}
-                    {% include catalogue_item.html post=post %}
+                {% for post in posts %}
+                    {% include post-info.html post=post %}
                 {% endfor %}
             </div>
+            {% if site.paginate %}
             <!-- Pagination links -->
             {% include paginator.html %}
+            {% endif %}
         </div>
 
         <div class="right flex-sm-none">

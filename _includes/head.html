@@ -13,24 +13,24 @@
 <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
 <!-- for layouts -->
-{% if layout.name == 'post' %}
+{% if page.layout == 'post' %}
 <link rel="stylesheet" href="{{ "/assets/style/railscasts.css" | relative_url }}">
 <link rel="stylesheet" href="{{ "/assets/style/post.css" | relative_url }}">
 <script src="{{ "/assets/javascript/post.js" | relative_url }}"></script>
 {% endif %}
 
 <!-- for pages -->
-{% if page.class == 'search' %}
+{% if page.layout == 'search' %}
 <link rel="stylesheet" href="{{ "/assets/style/search.css" | relative_url }}">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-jekyll-search/1.9.2/simple-jekyll-search.min.js"></script>
 <script src="{{ "/assets/javascript/search.js" | relative_url }}"></script>
 {% endif %}
 
-{% if page.class == 'home' %}
+{% if page.layout == 'home' %}
 <link rel="stylesheet" href="{{ "/assets/style/home.css" | relative_url }}">
 {% endif %}
 
-{% if page.class == 'classify' %}
+{% if page.layout == 'classify' %}
 <link rel="stylesheet" href="{{ "/assets/style/classify.css" | relative_url }}">
 {% endif %}
 

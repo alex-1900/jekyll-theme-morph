@@ -1,10 +1,11 @@
 @import "technia/variables";
 @import "technia/colors";
 @import "technia/functions";
-@import "technia/components/catalogue-item";
+@import "technia/components/post-info";
 @import "technia/components/paginator";
 
 .page-home {
+  font-size: 16px;
   .left {
     width: 59%;
     @include media-sm() {
