@@ -1,0 +1,68 @@
+@import "../colors";
+@import "../functions";
+
+.component {
+  &.catalogue {
+    margin-top: 3rem;
+    width: 85%;
+
+    header.header {
+      border-bottom: 1px solid map-get($colors, 'primary-dark');
+
+      .header-text {
+        padding: 1em 0;
+      }
+    }
+
+    ul.body {
+      padding: 1rem;
+      overflow: scroll;
+      white-space: nowrap;
+      border-left: 1px solid map-get($colors, 'primary-dark');
+      @include media-xs() {
+        max-height: 25rem;
+      }
+
+      &::-webkit-scrollbar {
+        display: none !important;
+      }
+
+      li {
+        list-style-type: none;
+        padding: 4px 0;
+
+        &.h2, &.h3, &.h4, &.h5, &.h6 {
+          &::before {
+            color: map-get($colors, 'primary');
+          }
+        }
+
+        &.h2::before {
+          content: '-- '
+        }
+
+        &.h3::before {
+          content: '---- '
+        }
+
+        &.h4::before {
+          content: '------ '
+        }
+
+        &.h5::before {
+          content: '-------- '
+        }
+
+        &.h6::before {
+          content: '---------- '
+        }
+
+        a {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

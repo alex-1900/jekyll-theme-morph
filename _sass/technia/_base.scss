@@ -11,12 +11,13 @@
 }
 
 :root {
-  background-color: white;
+  background-color: map-get($colors, 'base');
 }
 
 html {
   font-family: $serif-primary;
   font-size: 14px;
+  //text-shadow: 1px 1px 1px map-get($colors, 'primary');
   -webkit-text-size-adjust: 100%;
 }
 
@@ -61,8 +62,4 @@ input {
   0% {opacity: 0;}
   40% {opacity: 0;}
   100% {opacity: 1;}
-}
-
-.w-100 {
-  width: 100%;
 }

@@ -3,8 +3,12 @@ class: default
 layout: page
 permalink: /about
 ---
+<div style="padding-top: 2rem;">
+    {% assign paths = 'Page' %}
+    {% include bread-bar.html paths=paths  %}
+</div>
 
-<h1 class="color-secondary" style="padding: 4rem 0">About</h1>
+<h1 class="color-secondary" style="padding: 2rem 0">About</h1>
 
 <div class="color-secondary" style="font-size: 1.2rem;line-height: 2rem;padding: 0 0 4rem 0">
     <p><strong>Technia</strong> is a minimal Jekyll theme for blog project.</p>

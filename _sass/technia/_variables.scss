@@ -12,10 +12,9 @@ $gray-900: #212529 !default;
 $black:    #000 !default;
 
 // Fonts
-$serif-primary: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif !default;
-$serif-secondary: Palatino, 'Palatino LT STD', 'Palatino Linotype', 'Book Antiqua', 'Georgia', serif !default;
+$serif-primary: -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Arial,"PT Sans",PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif !default;
 $sans-serif: $serif-primary !default;
-$monospaced: "Source Code Pro", "Courier New", Courier, monospace, sans-serif !default;
+$monospaced: Source Code Pro, Courier New, Courier, monospace, sans-serif !default;
 
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;

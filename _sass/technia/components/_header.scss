@@ -31,7 +31,7 @@
     }
 
     $search-box-radius: 3px;
-    $search-box-border-color: rgba(186, 189, 182, 0.4);
+    $search-box-border-color: map-get($colors, 'primary-dark');
     input {
       font-size: 13px;
       padding: 6px 10px;
@@ -42,6 +42,7 @@
       border-top-left-radius: $search-box-radius;
       border-bottom-left-radius: $search-box-radius;
       color: map-get($colors, "secondary");
+      background-color: map-get($colors, 'base');
     }
 
     button.search-button {
@@ -69,7 +70,7 @@
         margin-right: 25px;
 
         a {
-          color: #614e3c;
+          color: map-get($colors, 'secondary');
           font-size: 14px;
           padding: 4px 6px;
         }

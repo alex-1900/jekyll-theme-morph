@@ -3,35 +3,19 @@ layout: default
 name: post
 ---
 <div class="page-post">
+    {% include structure.html list_id="structure-sm" %}
     <div class="content m-auto">
         <div class="d-flex">
-            <section class="left flex-sm-none">
-                <div class="status-bar d-flex">
-                    <div class="bread user-select-none flex-grow-1 d-flex flex-column justify-content-center">
-                        <div>
-                            <span><a href="/">Home</a></span>
-                            <i class="fas fa-angle-right"></i>
-                            <span>{{ page.date | date: '%Y' }}</span>
-                            <i class="fas fa-angle-right"></i>
-                            <span>{{ page.date | date: '%m' }}</span>
-                            <i class="fas fa-angle-right"></i>
-                            <span>{{ page.date | date: '%d' }}</span>
-                        </div>
+            <section class="left flex-sm-none flex-auto">
+                <div class="status-bar d-flex position-sm-sticky bg-base">
+                    <div class="h-100 flex-grow-1 d-flex flex-column justify-content-center">
+                        {% assign paths = page.date | date: 'Post %Y %m %d' %}
+                        {% include bread-bar.html paths=paths  %}
                     </div>
                     <div class="structure-menu d-flex flex-column justify-content-center">
-                        <button type="button" id="structure-button">
+                        <button type="button" class="bg-primary color-secondary" id="structure-button">
                             <i class="fas fa-code-branch"></i>
                         </button>
-                    </div>
-                    <div class="full-mask" id="full-mask">
-                        <div class="structure-box">
-                            <div class="header">
-                                <h3 class="text-center">structure</h3>
-                            </div>
-                            <ul class="structure-sm w-100" id="structure-sm">
-                                <!-- document structure list -->
-                            </ul>
-                        </div>
                     </div>
                 </div>
                 <header>
@@ -45,8 +29,8 @@ name: post
                     {{ content }}
                 </article>
             </section>
-            <aside class="right flex-sm-none d-sm-none">
-                <ul class="structure position-sticky-top" id="structure">
+            <aside class="right flex-sm-none flex-none d-sm-none component catalogue">
+                <ul class="body bg-base position-sticky-top" id="structure">
                     <!-- document structure list -->
                 </ul>
             </aside>
@@ -55,19 +39,15 @@ name: post
 </div>
 
 <script>
-    var postPage = new PostPage()
+    var postPage = new PostPage('{{ page.title }}')
     var structure = document.getElementById('structure')
     var structureSm = document.getElementById('structure-sm')
     var structureButton = document.getElementById('structure-button')
-    var fullMask = document.getElementById('full-mask')
     postPage.initStructure(structure)
     postPage.initStructure(structureSm)
     postPage.addAnchorToHeaders()
 
     structureButton.onclick = function () {
-        fullMask.style.display = 'block'
-    }
-    fullMask.onclick = function () {
-        fullMask.style.display = 'none'
+        window.comShowCatalogue()
     }
 </script>

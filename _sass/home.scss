@@ -19,13 +19,12 @@
     .title {
       font-size: 1.2rem;
       padding: 10px 0;
-      border-bottom: 1px dashed $gray-400;
+      border-bottom: 1px dashed map-get($colors, 'primary-dark');
     }
 
     .list-container {
       padding: 1rem 0;
       li {
-        list-style-type: none;
         a.hover-color-reversal:hover {
           background-color: map-get($colors, "link");
           color: white;

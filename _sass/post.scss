@@ -1,34 +1,23 @@
 @import "technia/variables";
 @import "technia/colors";
 @import "technia/functions";
+@import "technia/components/highlight";
+@import "technia/components/catalogue";
 
 .page-post {
   .content {
     .status-bar {
       @include media-sm() {
-        position: sticky;
         top: 0;
       }
-      background-color: white;
       height: 3rem;
-      .bread {
-        height: 100%;
-        font-size: .9rem;
-        span {
-          padding: .3rem;
-          border-radius: 5px;
-          background-color: map-get($colors, 'primary');
-          font-weight: bold;
-          color: map-get($colors, 'secondary-light');
-        }
-      }
       .structure-menu {
         height: 100%;
         button {
           display: none;
-          padding: .4rem;
+          padding: .4rem .6rem;
+          border-radius: 100%;
           border: 1px solid map-get($colors, 'primary');
-          background-color: transparent;
           @include media-sm() {
             display: inline;
           }
@@ -49,12 +38,16 @@
         }
       }
       article.text {
+        color: map-get($colors, 'secondary-light');
         font-size: 18px;
         line-height: 1.5;
         li {
           margin-left: 1.5em;
         }
         h1,h2,h3,h4,h5,h6 {
+          font-weight: normal;
+          color: map-get($colors, 'secondary-dark');
+          padding: 1rem 0 .5rem 0;
           .header-anchor {
             display: none;
             margin-left: 5px;
@@ -65,32 +58,6 @@
             animation: fade-in .5s;
             -webkit-animation:fade-in .5s;
           }
-        }
-
-        // code highlight
-        pre, code {
-          font-family: $monospaced;
-        }
-        pre.highlight, figure.highlight pre {
-          padding: 1rem 1rem;
-          overflow-x: scroll;
-          word-wrap: normal;
-        }
-        .rouge-gutter {
-          $color-gl: $gray-500;
-          border-right: 1px solid $color-gl;
-          .lineno {
-            padding-right: 1rem;
-            color: $color-gl;
-          }
-        }
-        code.language-plaintext {
-          background-color: map-get($colors, 'primary');
-          color: map-get($colors, 'link');
-          padding: 0 3px;
-        }
-        .rouge-code {
-          padding: 0 .5rem;
         }
       }
 
@@ -107,69 +74,11 @@
     .right {
       margin-left: 2rem;
       padding: 2rem 0;
+      width: 30%;
       h2 {
         padding: 0 0 1rem 1rem;
         border-left: 2px solid map-get($colors, 'primary-dark');
         border-bottom: 2px solid map-get($colors, 'primary-dark');
-      }
-    }
-
-    ul.structure {
-      border-left: 2px solid map-get($colors, 'primary-dark');
-      padding: 1rem 1rem;
-    }
-
-    .full-mask {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      padding: 1.5rem;
-      background-color: rgba(0,0,0,.5);
-      width: 100%;
-      height: 100%;
-      .structure-box {
-        background-color: white;
-        margin-top: 3rem;
-        .header {
-          padding: 1rem 0;
-          background-color: map-get($colors, 'primary');
-          border-bottom: 1px solid map-get($colors, 'primary-dark');
-        }
-        ul.structure-sm {
-          padding: 1rem;
-          max-height: 25rem;
-          overflow: scroll;
-
-          li {
-            font-size: 1rem !important;
-          }
-        }
-      }
-    }
-
-    ul.structure, ul.structure-sm {
-      background-color: white;
-      overflow-x: scroll;
-      word-wrap: normal;
-      &::-webkit-scrollbar {
-        display:none !important;
-      }
-      li {
-        list-style-type :none;
-        padding: 3px 0;
-        &:not(:last-child).h1 {border-bottom: 1px solid  map-get($colors, 'primary-dark')}
-        &.h1 {font-size: 1.3rem}
-        &.h2 {font-size: 1.2rem}
-        &.h3 {font-size: 1.1rem; text-indent: .5rem}
-        &.h4 {font-size: 1rem; text-indent: 1rem}
-        &.h5 {font-size: .9rem; text-indent: 1.5rem}
-        &.h6 {font-size: .8rem; text-indent: 2rem}
-        a {
-          color: map-get($colors, 'secondary-light');
-          &:hover {
-            text-decoration: underline;
-          }
-        }
       }
     }
 

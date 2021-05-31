@@ -1,0 +1,24 @@
+<div class="full-mask" id="full-mask-catalogue">
+    <div class="component catalogue m-auto">
+        <header class="header">
+            <h3 class="header-text text-center color-secondary bg-primary">Catalogue</h3>
+        </header>
+        <ul class="body bg-base w-100" id="{{ include.list_id }}">
+            <!-- document structure list -->
+        </ul>
+    </div>
+</div>
+<script>
+    (function () {
+        "use struct"
+        var fullMask = document.getElementById('full-mask-catalogue')
+
+        fullMask.onclick = function () {
+            fullMask.style.display = 'none'
+        }
+
+        window.comShowCatalogue = function () {
+            fullMask.style.display = 'block'
+        }
+    })()
+</script>

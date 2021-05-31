@@ -1,7 +1,18 @@
 (function() {
     "use struct"
 
-    function post() {
+    function createStructureItem(id, text, className) {
+        var a = document.createElement('a')
+        var li = document.createElement('li')
+        a.href = '#' + id
+        a.innerText = text
+        li.className = className
+        li.appendChild(a)
+        return li
+    }
+
+    function post(title) {
+        this.title = title
     }
 
     post.prototype.getHeaders = function () {
@@ -12,13 +23,9 @@
     post.prototype.initStructure = function (structure) {
         var headers = this.getHeaders()
         headers.forEach(function (value) {
-            var a = document.createElement('a')
-            var li = document.createElement('li')
-            a.href = '#' + value.id
-            a.innerText = value.innerText
-            li.className = value.nodeName.toLowerCase()
-            li.appendChild(a)
-            structure.appendChild(li)
+            structure.appendChild(createStructureItem(
+                value.id, value.innerText, value.nodeName.toLowerCase()
+            ))
         })
     }
 

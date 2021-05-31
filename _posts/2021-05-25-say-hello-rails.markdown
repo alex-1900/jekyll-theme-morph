@@ -5,12 +5,13 @@ date:   2021-05-25 06:28:14 +0000
 categories: technology
 tags: ruby rails
 ---
+
 To get Rails saying "Hello", you need to create at minimum a route, a controller with an action,
 and a view. A route maps a request to a controller action.
 A controller action performs the necessary work to handle the request,
 and prepares any data for the view. A view displays data in a desired format.
 
-In terms of implementation: Routes are rules written in a Ruby `[DSL (Domain-Specific Language)](https://en.wikipedia.org/wiki/Domain-specific_language)`.
+In terms of implementation: Routes are rules written in a Ruby [`DSL (Domain-Specific Language)`](https://en.wikipedia.org/wiki/Domain-specific_language).
 Controllers are Ruby classes, and their public methods are actions.
 And views are templates, usually written in a mixture of HTML and Ruby.
 

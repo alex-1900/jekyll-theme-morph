@@ -1,0 +1,8 @@
+<div class="component bread fw-bold user-select-none">
+    <span class="bg-primary"><a class="link-light" href="{{ '/' | site.baseurl }}">Home</a></span>
+    {% assign paths = include.paths | split: " " %}
+    {% for path in paths %}
+    <i class="fas fa-angle-right color-secondary"></i>
+    <span class="bg-primary color-secondary-light">{{ path }}</span>
+    {% endfor %}
+</div>

@@ -138,7 +138,37 @@ $utilities: map-merge(
       property: cursor,
       class: cursor,
       values: default pointer auto text crosshair move help wait
-    )
+    ),
+    "width": (
+      property: width,
+      class: w,
+      values: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%
+      )
+    ),
+    "height": (
+      property: height,
+      class: h,
+      values: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%
+      )
+    ),
+    "list-style-type": (
+      property: list-style-type,
+      class: list-style,
+      values: none disc circle square decimal
+    ),
+    "position": (
+      property: position,
+      class: position,
+      values: absolute fixed relative static sticky inherit initial
+    ),
   ),
   $utilities
 );

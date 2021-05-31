@@ -24,7 +24,7 @@ template: home
                     {% for post in site.posts %}
                         {% if post.sticky %}
                             {% assign sticky_index = sticky_index | plus:1 %}
-                            {% include list-row.html post=post index=sticky_index  %}
+                            {% include trending-article-item.html post=post index=sticky_index  %}
                         {% endif %}
                     {% endfor %}
                 </ul>
@@ -38,7 +38,9 @@ template: home
                 </h2>
                 <ul class="list-container">
                     {% for tag in site.tags %}
-                    <li class="horizontal"><a class="flat" href="#{{ tag[0] }}">{{ tag[0] }}</a></li>
+                    <li class="horizontal list-style-none">
+                        <a class="flat" href="{{ '/tags' | prepend: site.baseurl }}#{{ tag[0] }}">{{ tag[0] }}</a>
+                    </li>
                     {% endfor %}
                 </ul>
             </div>

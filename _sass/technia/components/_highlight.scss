@@ -1,0 +1,33 @@
+// code highlight
+@import "../variables";
+@import "../colors";
+
+.highlighter-rouge {
+  margin: 1rem 0;
+}
+pre, code {
+  font-family: $monospaced;
+  font-size: 15px;
+}
+pre.highlight, figure.highlight pre {
+  padding: 1rem 1rem;
+  overflow-x: auto;
+  word-wrap: normal;
+}
+.rouge-gutter, .gutter {
+  $color-gl: map-get($colors, 'secondary-light');
+  border-right: 1px solid $color-gl;
+  .lineno {
+    padding-right: 1rem;
+    color: $color-gl;
+  }
+}
+code.language-plaintext {
+  background-color: map-get($colors, 'primary-dark');
+  color: map-get($colors, 'secondary');
+  font-weight: bold;
+  padding: 2px 4px;
+}
+.rouge-code {
+  padding: 0 .5rem;
+}

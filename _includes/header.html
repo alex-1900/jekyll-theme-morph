@@ -10,7 +10,7 @@
                 <form action="{{ '/search' | prepend: site.baseurl }}" id="header-search-form" class="search">
                     <label class="search-wrap d-flex flex-none">
                         <input name="words" class="search-input flex-grow-1" id="header-search-input" type="text" />
-                        <button class="search-button cursor-pointer" type="submit">
+                        <button class="search-button cursor-pointer bg-primary" type="submit">
                             <i class="fas fa-arrow-right"></i>
                         </button>
                     </label>
@@ -22,9 +22,9 @@
         <div class="m-auto content">
             <div>
                 <ul class="white-space-nowrap">
-                    <li class="d-inline-block active"><a href="{{ '/' | site.baseurl }}">posts</a></li>
-                    <li class="d-inline-block"><a href="{{ '/tags' | site.baseurl }}">tags</a></li>
-                    <li class="d-inline-block"><a href="{{ '/categories' | site.baseurl }}">categories</a></li>
+                    <li class="d-inline-block active"><a href="{{ '/' | prepend: site.baseurl }}">posts</a></li>
+                    <li class="d-inline-block"><a href="{{ '/tags' | prepend: site.baseurl }}">tags</a></li>
+                    <li class="d-inline-block"><a href="{{ '/categories' | prepend: site.baseurl }}">categories</a></li>
                     <li class="d-inline-block"><a href="{{ '/about' | prepend: site.baseurl }}">about</a></li>
                     <li class="d-inline-block"><a href="{{ '/search' | prepend: site.baseurl }}">search</a></li>
                 </ul>
