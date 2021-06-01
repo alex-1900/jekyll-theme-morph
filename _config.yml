@@ -51,6 +51,13 @@ linenos: true
 
 technia:
   skin: silver
+  pages:
+    - name: tags
+      path: /tags
+    - name: categories
+      path: /categories
+    - name: search
+      path: /search
 
 # Pagination Settings
 paginate: 6
