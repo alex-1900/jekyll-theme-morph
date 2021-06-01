@@ -1,10 +1,10 @@
-@import "../colors";
+@import "../variables";
 
 .pagination {
   padding: 2rem 0;
   a, span, em {
     display: inline-block;
-    color: map-get($colors, "secondary-light");
+    color: $color-secondary-light;
     padding: .4rem .8rem;
     background-color: #f6f6f1;
     text-align: center;
@@ -13,7 +13,7 @@
   }
 
   em {
-    color: map-get($colors, "secondary-dark");
+    color: $color-secondary-dark;
     font-style: normal;
   }
 }

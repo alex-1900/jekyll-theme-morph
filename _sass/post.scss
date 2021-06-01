@@ -6,18 +6,25 @@
 
 .page-post {
   .content {
+    .position-sticky-top {
+      position: sticky;
+      top: 0;
+    }
+
     .status-bar {
       @include media-sm() {
         top: 0;
       }
       height: 3rem;
+
       .structure-menu {
         height: 100%;
+
         button {
           display: none;
           padding: .4rem .6rem;
           border-radius: 100%;
-          border: 1px solid map-get($colors, 'primary');
+          border: 1px solid $color-primary;
           @include media-sm() {
             display: inline;
           }
@@ -25,66 +32,107 @@
       }
     }
 
+    // left area
     .left {
-      width: 70%;
       padding: 2rem 0;
-      color: map-get($colors, 'secondary');
+      color: $color-secondary;
+      width: 70%;
+      @include media-sm() {
+        width: 100%;
+      }
 
       header {
         padding: 0 0 2.5rem 0;
         .title {
           font-size: 2.5rem;
           padding: .5rem 0;
-        }
-      }
-      article.text {
-        color: map-get($colors, 'secondary-light');
-        font-size: 18px;
-        line-height: 1.5;
-        li {
-          margin-left: 1.5em;
-        }
-        h1,h2,h3,h4,h5,h6 {
-          font-weight: normal;
-          color: map-get($colors, 'secondary-dark');
-          padding: 1rem 0 .5rem 0;
-          .header-anchor {
-            display: none;
-            margin-left: 5px;
-            font-size: .7em;
-          }
-          &:hover .header-anchor {
-            display: inline-block;
-            animation: fade-in .5s;
-            -webkit-animation:fade-in .5s;
-          }
-        }
-      }
-
-      @include media-sm() {
-        width: 100%;
-        header {
-          .title {
+          @include media-sm() {
             font-size: 2rem;
           }
         }
       }
     }
 
+    // right area
     .right {
       margin-left: 2rem;
       padding: 2rem 0;
       width: 30%;
+
       h2 {
         padding: 0 0 1rem 1rem;
-        border-left: 2px solid map-get($colors, 'primary-dark');
-        border-bottom: 2px solid map-get($colors, 'primary-dark');
+        border-left: 2px solid $color-primary-dark;
+        border-bottom: 2px solid $color-primary-dark;
       }
     }
 
-    .position-sticky-top {
-      position: sticky;
-      top: 0;
+    // article area
+    article.text {
+      color: map-get($colors, 'secondary-light');
+      font-size: 18px;
+      line-height: 1.5;
+
+      h1, h2, h3, h4, h5, h6,
+      p, blockquote, pre,
+      ul, ol, dl, figure,
+      %vertical-rhythm {
+        margin-bottom: 1rem;
+      }
+
+      ul, ol {
+        margin-left: 1.5rem;
+      }
+
+      li {
+        > ul,
+        > ol {
+          margin-bottom: 0;
+        }
+      }
+
+      hr {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      figure > img {
+        display: block;
+      }
+
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      blockquote {
+        color: $color-secondary-light;
+        border-left: 4px solid $color-rang1;
+        padding-left: .5em;
+        font-style: italic;
+
+        i, em {
+          font-style: normal;
+        }
+      }
+
+      // header style and anchor animations
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: normal;
+        color: $color-secondary-dark;
+        //padding: 1rem 0 .5rem 0;
+        .header-anchor {
+          display: none;
+          margin-left: 5px;
+          font-size: .7em;
+        }
+
+        &:hover .header-anchor {
+          display: inline-block;
+          animation: fade-in .5s;
+          -webkit-animation: fade-in .5s;
+        }
+      }
     }
   }
 }

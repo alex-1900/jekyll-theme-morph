@@ -1,3 +1,4 @@
 ---
 ---
+@import "technia/themes/{{ site.technia.skin | default: 'silver' }}";
 @import "technia";

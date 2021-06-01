@@ -44,11 +44,14 @@ kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     css_class: 'highlight'
-#    block:
-#      line_numbers: true
-#      start_line: 1
-#
-#linenos: true
+    block:
+      line_numbers: true
+      start_line: 1
+
+linenos: true
+
+technia:
+  skin: obsidian
 
 # Pagination Settings
 paginate: 6

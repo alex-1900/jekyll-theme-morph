@@ -1,4 +1,4 @@
-@import "../colors";
+@import "../variables";
 
 footer.footer {
   padding: 1rem 0;
@@ -6,6 +6,6 @@ footer.footer {
     padding: 1rem;
     font-size: .9rem;
     line-height: 1.5rem;
-    border-top: 1px dashed map-get($colors, "primary-dark");
+    border-top: 1px dashed $color-primary-dark;
   }
 }

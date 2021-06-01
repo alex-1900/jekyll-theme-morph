@@ -1,5 +1,4 @@
 @import "technia/variables";
-@import "technia/colors";
 @import "technia/functions";
 @import "technia/components/post-info";
 @import "technia/components/paginator";
@@ -20,14 +19,14 @@
     .title {
       font-size: 1.2rem;
       padding: 10px 0;
-      border-bottom: 1px dashed map-get($colors, 'primary-dark');
+      border-bottom: 1px dashed $color-primary-dark;
     }
 
     .list-container {
       padding: 1rem 0;
       li {
         a.hover-color-reversal:hover {
-          background-color: map-get($colors, "link");
+          background-color: $color-link;
           color: white;
         }
         &.horizontal {
@@ -35,9 +34,9 @@
           margin-top: .5rem;
         }
         &.hover-primary:hover {
-          background-color: map-get($colors, 'primary');
+          background-color: $color-primary;
           a.hover-border {
-            border: 1px solid map-get($colors, 'primary-dark');
+            border: 1px solid $color-primary-dark;
             position: relative;
             left: 1px;
           }

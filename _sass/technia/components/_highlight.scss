@@ -1,33 +1,65 @@
 // code highlight
 @import "../variables";
-@import "../colors";
 
-.highlighter-rouge {
-  margin: 1rem 0;
-}
-pre, code {
-  font-family: $monospaced;
-  font-size: 15px;
-}
-pre.highlight, figure.highlight pre {
-  padding: 1rem 1rem;
-  overflow-x: auto;
-  word-wrap: normal;
-}
-.rouge-gutter, .gutter {
-  $color-gl: map-get($colors, 'secondary-light');
-  border-right: 1px solid $color-gl;
-  .lineno {
-    padding-right: 1rem;
-    color: $color-gl;
+.highlight {
+  border-radius: 3px;
+  background: $color-primary;
+  ::-webkit-scrollbar{
+    //width: 20px;
+    height: .5rem;
+  }
+  ::-webkit-scrollbar-thumb{
+    border-radius: 1em;
+    background-color: $color-primary-light;
+  }
+  ::-webkit-scrollbar-track{
+    border-radius: 1em;
+    background-color: $color-primary-dark;
+  }
+
+  .highlighter-rouge & {
+    background: $color-primary;
   }
 }
+
+pre, code {
+  font-family: $monospaced;
+  font-size: 0.9375em;
+  border: 1px solid $color-primary;
+  border-radius: 3px;
+  background-color: $color-primary;
+}
+code {
+  padding: 1px 5px;
+}
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+.rouge-gutter, .gutter {
+  $color-gl: $color-secondary-light;
+  border-right: 1px solid $color-primary-dark;
+  .lineno {
+    padding-right: 1rem;
+    color: $color-secondary-light;
+  }
+}
+.code {
+  padding: 0 1rem;
+}
 code.language-plaintext {
-  background-color: map-get($colors, 'primary-dark');
+  background-color: $color-primary-dark;
   color: map-get($colors, 'secondary');
   font-weight: bold;
   padding: 2px 4px;
 }
-.rouge-code {
-  padding: 0 .5rem;
+
+.rouge-code pre {
+  margin-bottom: 0 !important;
 }

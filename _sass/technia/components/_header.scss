@@ -1,9 +1,9 @@
 @import "../functions";
-@import "../colors";
+@import "../variables";
 
 .header {
   .border-bottom {
-    border-bottom: 1px solid map-get($colors, "primary-dark");
+    border-bottom: 1px solid $color-primary-dark;
   }
 
   .logo {
@@ -12,10 +12,10 @@
 
     a {
       font-family: Arial, PingFangSC-Regular, "Microsoft YaHei-Regular", "Microsoft YaHei", serif;
-      color: map-get($colors, "logo");
+      color: $color-logo;
 
       &:hover {
-        color: tint-color(map-get($colors, "logo"), 15%);
+        color: tint-color($color-logo, 15%);
       }
     }
   }
@@ -30,8 +30,8 @@
       width: 35%;
     }
 
-    $search-box-radius: 3px;
-    $search-box-border-color: map-get($colors, 'primary-dark');
+    $search-box-radius: 2px;
+    $search-box-border-color: $color-primary-dark;
     input {
       font-size: 13px;
       padding: 6px 10px;
@@ -41,8 +41,8 @@
       border-right: 0;
       border-top-left-radius: $search-box-radius;
       border-bottom-left-radius: $search-box-radius;
-      color: map-get($colors, "secondary");
-      background-color: map-get($colors, 'base');
+      color: $color-secondary;
+      background-color: $color-base;
     }
 
     button.search-button {
@@ -52,7 +52,7 @@
       border-bottom-right-radius: $search-box-radius;
       padding: 6px 8px;
       margin-left: -5px;
-      color: map-get($colors, "secondary");
+      color: $color-secondary-light;
     }
   }
 
@@ -70,7 +70,7 @@
         margin-right: 25px;
 
         a {
-          color: map-get($colors, 'secondary');
+          color: $color-secondary;
           font-size: 14px;
           padding: 4px 6px;
         }

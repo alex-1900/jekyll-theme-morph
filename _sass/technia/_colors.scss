@@ -1,5 +1,4 @@
 @import "variables";
-@import "theme";
 
 $grays: (
   "100": $gray-100,
@@ -13,7 +12,22 @@ $grays: (
   "900": $gray-900
 ) !default;
 
-$colors: () !default;
+$colors: (
+  "base": $color-base,
+  "primary-light": $color-primary-light,
+  "primary": $color-primary,
+  "primary-dark": $color-primary-dark,
+  "secondary-light": $color-secondary-light,
+  "secondary": $color-secondary,
+  "secondary-dark": $color-secondary-dark,
+  "link-light": $color-link-light,
+  "link": $color-link,
+  "link-dark": $color-link-dark,
+  "rang1": $color-rang1,
+  "rang2": $color-rang2,
+  "logo": $color-logo
+) !default;
+
 
 // .color-gray-[level]
 // .bg-gray-[level]

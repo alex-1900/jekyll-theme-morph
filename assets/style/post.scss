@@ -1,4 +1,5 @@
 ---
 ---
+@import "technia/themes/{{ site.technia.skin | default: 'silver' }}";
 @import "post";
-@import "railscasts.css";
+//@import "railscasts.css";

@@ -1,5 +1,4 @@
 @import "technia/variables";
-@import "technia/colors";
 @import "technia/functions";
 
 .page-search {
@@ -12,7 +11,7 @@
   }
 
   $search-box-radius: 3px;
-  $search-box-border-color: map-get($colors, 'primary-dark');
+  $search-box-border-color: $color-primary-dark;
   input.search-input {
     font-size: 14px;
     padding: 12px 10px;
@@ -62,7 +61,7 @@
         line-height: 1.7rem;
       }
       &:not(:last-child) {
-        border-bottom: 1px dashed map-get($colors, 'primary-dark');
+        border-bottom: 1px dashed $color-primary-dark;
       }
     }
   }

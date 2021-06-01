@@ -1,4 +1,4 @@
-@import "../colors";
+@import "../variables";
 @import "../functions";
 
 .component {
@@ -7,7 +7,7 @@
     width: 85%;
 
     header.header {
-      border-bottom: 1px solid map-get($colors, 'primary-dark');
+      border-bottom: 1px solid $color-primary-dark;
 
       .header-text {
         padding: 1em 0;
@@ -18,7 +18,7 @@
       padding: 1rem;
       overflow: scroll;
       white-space: nowrap;
-      border-left: 1px solid map-get($colors, 'primary-dark');
+      border-left: 1px solid $color-primary-dark;
       @include media-xs() {
         max-height: 25rem;
       }
@@ -33,7 +33,7 @@
 
         &.h2, &.h3, &.h4, &.h5, &.h6 {
           &::before {
-            color: map-get($colors, 'primary');
+            color: $color-primary;
           }
         }
 
