@@ -70,7 +70,7 @@ and can see the `tags` and `categories` buttons now.
 
 ### Add searching page
 1. create `search.json` at project root, and add these lines:
-```json
+```text
 ---
 layout: none
 permalink: /search.json
