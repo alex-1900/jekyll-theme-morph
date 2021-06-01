@@ -21,7 +21,7 @@
 title: Technia
 email: your-email@example.com
 description: the technia
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/technia" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #domain: your-domain.com
 
