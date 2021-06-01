@@ -2,7 +2,7 @@
 
 technia is a simple Jekyll theme for writers.
 
-![show1](https://user-images.githubusercontent.com/49949411/120296585-db318400-c2fa-11eb-9558-30701229d467.png)
+[Demo](http://blog.technia.site/technia/)
 
 ## Installation
 Install with github page:
