@@ -1,4 +1,4 @@
-{% assign t = site.data.language[page.lang].t | default: site.data.language.en.t %}
+{% assign t = site.data.language[page.lang].t %}
 <nav class="header w-100 bg-primary d-flex flex-column">
     <div class="border-bottom" style="height: 65%;">
         <div class="m-auto content h-100 d-flex">
@@ -23,11 +23,11 @@
         <div class="m-auto content">
             <div>
                 <ul class="white-space-nowrap">
-                    <li class="d-inline-block active"><a href="{{ '/' | prepend: site.baseurl }}">{{ t.posts }}</a></li>
-                    <li class="d-inline-block"><a href="{{ '/tags' | prepend: site.baseurl }}">{{ t.tags_low }}</a></li>
-                    <li class="d-inline-block"><a href="{{ '/categories' | prepend: site.baseurl }}">{{ t.categories_low }}</a></li>
-                    <li class="d-inline-block"><a href="{{ '/about' | prepend: site.baseurl }}">{{ t.about_low }}</a></li>
-                    <li class="d-inline-block"><a href="{{ '/search' | prepend: site.baseurl }}">{{ t.search_low }}</a></li>
+                    <li class="d-inline-block active"><a href="{{ '/' | prepend: site.baseurl }}">{{ t.posts | default: 'posts' }}</a></li>
+                    <li class="d-inline-block"><a href="{{ '/tags' | prepend: site.baseurl }}">{{ t.tags_low | default: 'tags' }}</a></li>
+                    <li class="d-inline-block"><a href="{{ '/categories' | prepend: site.baseurl }}">{{ t.categories_low | default: 'categories' }}</a></li>
+                    <li class="d-inline-block"><a href="{{ '/about' | prepend: site.baseurl }}">{{ t.about_low | default: 'about' }}</a></li>
+                    <li class="d-inline-block"><a href="{{ '/search' | prepend: site.baseurl }}">{{ t.search_low | default: 'search' }}</a></li>
                 </ul>
             </div>
         </div>

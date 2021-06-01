@@ -4,19 +4,19 @@ layout: page
 {% assign sources = "tags,categories" | split:"," %}
 {% if sources contains page.source %}
 
-{% assign t = site.data.language[page.lang].t | default: site.data.language.en.t %}
+{% assign t = site.data.language[page.lang].t %}
 
 {% if page.source == 'tags' %}
-    {% assign title = t.tags_up %}
+    {% assign title = t.tags_up | default: 'Tags' %}
     {% assign fws_class = 'fas fa-tags' %}
 {% else %}
-    {% assign title = t.categories_up %}
+    {% assign title = t.categories_up | default: 'Categories' %}
     {% assign fws_class = 'far fa-folder-open' %}
 {% endif %}
 
 <div class="page-classify">
     <div>
-        {% assign paths = t.page %}
+        {% assign paths = t.page | default: 'Page' %}
         {% include bread-bar.html paths=paths  %}
     </div>
     <header class="header">

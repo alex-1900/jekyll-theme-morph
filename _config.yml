@@ -63,11 +63,11 @@ sass:
 
 include: ['_pages']
 
-defaults:
-  - scope:
-      type: "posts"
-    values:
-      lang: en
+#defaults:
+#  - scope:
+#      type: "posts"
+#    values:
+#      lang: en
 
 # Exclude from processing.
 # The following items will not be processed, by default.

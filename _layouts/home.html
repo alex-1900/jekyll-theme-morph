@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% assign t = site.data.language[page.lang].t | default: site.data.language.en.t %}
+{% assign t = site.data.language[page.lang].t %}
 <div class="page-home">
     {% if site.paginate %}
         {% assign posts = paginator.posts %}
@@ -26,7 +26,7 @@ layout: default
             {% if _stickies contains true %}
             <div class="w-100 item">
                 <h2 class="d-flex color-secondary title">
-                    <p class="flex-grow-1"><i class="far fa-file-pdf"></i> {{ t.trending_articles }}</p>
+                    <p class="flex-grow-1"><i class="far fa-file-pdf"></i> {{ t.trending_articles | default: 'Trending Articles' }}</p>
                 </h2>
                 <ul class="list-container">
                     {% assign sticky_index = 0 %}
@@ -41,9 +41,9 @@ layout: default
             {% endif %}
             <div class="w-100 item">
                 <h2 class="d-flex color-secondary title">
-                    <p class="flex-grow-1"><i class="fas fa-tag"></i> {{ t.trending_tags }}</p>
+                    <p class="flex-grow-1"><i class="fas fa-tag"></i> {{ t.trending_tags | default: 'Trending Tags' }}</p>
                     <a class="fw-normal" href="{{ '/tags' | prepend: site.baseurl }}">
-                        <span style="font-size: .9rem">{{ t.show_more }} »</span>
+                        <span style="font-size: .9rem">{{ t.show_more | default: 'show more' }} »</span>
                     </a>
                 </h2>
                 <ul class="list-container">
