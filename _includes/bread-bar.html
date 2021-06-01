@@ -1,5 +1,6 @@
+{% assign t = site.data.language[page.lang].t | default: site.data.language.en.t %}
 <div class="component bread fw-bold user-select-none">
-    <span class="bg-primary"><a class="link-light" href="{{ '/' | site.baseurl }}">Home</a></span>
+    <span class="bg-primary"><a class="link-light" href="{{ '/' | site.baseurl }}">{{ t.home }}</a></span>
     {% assign paths = include.paths | split: " " %}
     {% for path in paths %}
     <i class="fas fa-angle-right color-secondary"></i>

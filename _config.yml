@@ -49,8 +49,8 @@ kramdown:
 
 linenos: true
 
-#technia:
-#  skin: obsidian
+technia:
+  skin: silver
 
 # Pagination Settings
 paginate: 6
@@ -62,6 +62,12 @@ sass:
   style:        compressed
 
 include: ['_pages']
+
+defaults:
+  - scope:
+      type: "posts"
+    values:
+      lang: en
 
 # Exclude from processing.
 # The following items will not be processed, by default.

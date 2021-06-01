@@ -1,10 +1,11 @@
 ---
 layout: default
 ---
+{% assign t = site.data.language[page.lang].t | default: site.data.language.en.t %}
 <div id="page-search" class="page-search">
     <div class="content m-auto">
         <div style="padding-top: 2rem;">
-            {% assign paths = 'Search' %}
+            {% assign paths = t.search_up %}
             {% include bread-bar.html paths=paths  %}
         </div>
         <header class="header d-flex">
@@ -14,14 +15,14 @@ layout: default
                     type="text"
                     class="search-input flex-grow-1 bg-base color-secondary"
                     id="search-input"
-                    placeholder="input key words here..."
+                    placeholder="{{ t.search_placeholder }}"
                 />
                 <button
                     type="button"
                     id="search-button"
                     class="search-button cursor-pointer bg-primary color-secondary"
                 >
-                    Search
+                    {{ t.search_up }}
                 </button>
             </div>
         </header>

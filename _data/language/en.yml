@@ -1,0 +1,19 @@
+t:
+  posts: posts
+  tags_low: tags
+  tags_up: Tags
+  categories_low: categories
+  categories_up: Categories
+  about_low: about
+  about_up: About
+  search_low: search
+  search_up: Search
+  catalogue: Catalogue
+  home: Home
+  page: Page
+  post: Post
+  search_placeholder: "input key words here..."
+  update_time: "Update time"
+  trending_articles: Trending Articles
+  trending_tags: Trending Tags
+  show_more: show more

@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% assign t = site.data.language[page.lang].t | default: site.data.language.en.t %}
 <div class="page-post">
     {% include catalogue.html list_id="structure-sm" %}
     <div class="content m-auto">
@@ -8,7 +9,7 @@ layout: default
             <section class="left flex-sm-none flex-auto">
                 <div class="status-bar d-flex position-sm-sticky bg-base">
                     <div class="h-100 flex-grow-1 d-flex flex-column justify-content-center">
-                        {% assign paths = page.date | date: 'Post %Y %m %d' %}
+                        {% assign paths = page.date | date: ' %Y %m %d' | prepend: t.post %}
                         {% include bread-bar.html paths=paths  %}
                     </div>
                     <div class="structure-menu d-flex flex-column justify-content-center">
@@ -20,7 +21,7 @@ layout: default
                 <header>
                     <h1 class="title fw-normal">{{ page.title }}</h1>
                     <p class="color-secondary-light">
-                        Update time:
+                        {{ t.update_time }}:
                         <time datetime="{{ site.time }}">{{ page.date | date: '%Y-%m-%d %H:%M' }}</time>
                     </p>
                 </header>

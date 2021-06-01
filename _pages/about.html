@@ -1,9 +1,11 @@
 ---
 layout: page
 permalink: /about
+lang: en
 ---
+{% assign t = site.data.language[page.lang].t | default: site.data.language.en.t %}
 <div style="padding-top: 2rem;">
-    {% assign paths = 'Page' %}
+    {% assign paths = t.page %}
     {% include bread-bar.html paths=paths  %}
 </div>
 
