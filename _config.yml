@@ -23,8 +23,7 @@ email: your-email@example.com
 description: the technia
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-lang: zh
-domain: your-domain.com
+#domain: your-domain.com
 
 # Accounts
 github_username:  jekyll
@@ -50,8 +49,8 @@ kramdown:
 
 linenos: true
 
-technia:
-  skin: obsidian
+#technia:
+#  skin: obsidian
 
 # Pagination Settings
 paginate: 6

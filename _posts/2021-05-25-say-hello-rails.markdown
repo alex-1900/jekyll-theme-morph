@@ -4,6 +4,7 @@ title:  Say "Hello", Rails
 date:   2021-05-25 06:28:14 +0000
 categories: technology
 tags: ruby rails
+sticky: true
 ---
 
 To get Rails saying "Hello", you need to create at minimum a route, a controller with an action,
