@@ -4,7 +4,6 @@ title:  世卫组织用希腊字母命名新冠病毒变异株
 date:   2021-05-26 06:28:14 +0000
 categories: literature
 tags: news
-sticky: true
 ---
 
 This is a Chinese test post.

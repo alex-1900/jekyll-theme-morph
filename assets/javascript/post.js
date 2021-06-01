@@ -1,13 +1,19 @@
 (function() {
     "use struct"
 
-    function createStructureItem(id, text, className) {
+    function createStructureItem(element) {
         var a = document.createElement('a')
         var li = document.createElement('li')
-        a.href = '#' + id
-        a.innerText = text
-        li.className = className
+        a.href = '#' + element.id
+        a.innerText = element.innerText
+        li.className = element.nodeName.toLowerCase()
         li.appendChild(a)
+
+        a.onclick = function (event) {
+            event.preventDefault()
+            element.scrollIntoView({behavior: "smooth"})
+        }
+
         return li
     }
 
@@ -23,9 +29,7 @@
     post.prototype.initStructure = function (structure) {
         var headers = this.getHeaders()
         headers.forEach(function (value) {
-            structure.appendChild(createStructureItem(
-                value.id, value.innerText, value.nodeName.toLowerCase()
-            ))
+            structure.appendChild(createStructureItem(value))
         })
     }
 

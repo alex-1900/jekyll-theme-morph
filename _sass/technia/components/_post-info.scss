@@ -1,7 +1,14 @@
 @import "../variables";
 
-.catalogue-item {
+.post-info {
   padding: 1rem .7rem;
+  border-radius: 8px;
+  &:hover {
+    background-color: $color-primary-light;
+    a.flat {
+      background-color: $color-primary-dark;
+    }
+  }
   &:not(:first-child) {
     border-top: 1px dashed $color-primary-dark;
   }

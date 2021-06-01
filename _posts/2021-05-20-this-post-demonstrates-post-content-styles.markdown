@@ -4,6 +4,8 @@ title:  "This post demonstrates post content styles"
 date:   2021-05-28 06:28:14 +0000
 categories: technology
 tags: highlight markdown
+sticky: true
+recommend_reason: good for new users, show the headers, section and codes style
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.

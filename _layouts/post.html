@@ -14,9 +14,14 @@ layout: default
                         {% include bread-bar.html paths=paths  %}
                     </div>
                     <div class="structure-menu d-flex flex-column justify-content-center">
-                        <button type="button" class="bg-primary color-secondary" id="structure-button">
-                            <i class="fas fa-code-branch"></i>
-                        </button>
+                        <div>
+                            <button type="button" class="bg-primary color-secondary" id="scroll-top">
+                                <i class="fas fa-angle-up"></i>
+                            </button>
+                            <button type="button" class="bg-primary color-secondary" id="structure-button">
+                                <i class="far fa-caret-square-down"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <header>
@@ -34,6 +39,9 @@ layout: default
                 <ul class="body bg-base position-sticky-top" id="structure">
                     <!-- document structure list -->
                 </ul>
+                <button class="bg-primary-dark color-secondary-dark text-center cursor-pointer" title="to top" id="scroll-top-lg">
+                    <i class="fas fa-caret-up"></i>
+                </button>
             </aside>
         </div>
     </div>
@@ -44,6 +52,8 @@ layout: default
     var structure = document.getElementById('structure')
     var structureSm = document.getElementById('structure-sm')
     var structureButton = document.getElementById('structure-button')
+    var scrollTop = document.getElementById('scroll-top')
+    var scrollTopLg = document.getElementById('scroll-top-lg')
     postPage.initStructure(structure)
     postPage.initStructure(structureSm)
     postPage.addAnchorToHeaders()
@@ -51,4 +61,9 @@ layout: default
     structureButton.onclick = function () {
         window.comShowCatalogue()
     }
+
+    scrollTop.onclick = function () {
+        window.scrollTo({top: 0, behavior: "smooth"})
+    }
+    scrollTopLg.onclick = scrollTop.onclick
 </script>
