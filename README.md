@@ -144,4 +144,22 @@ t:
   catalogue_empty: Catalogue is empty
 ```
 
+3 add your the `lang` item to your page files
+```html
+---
+lang: [lang]
+---
+```
+
+(the `[lang]` is abbreviation of your language)
+
+- for posts page, you can change the defaults scope:
+```yml
+defaults:
+  - scope:
+      type: "posts"
+    values:
+      lang: [lang]  # the `[lang]` is abbreviation of your language
+```
+
 and rebuild or restart the dev server
