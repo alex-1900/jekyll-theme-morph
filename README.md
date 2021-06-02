@@ -115,3 +115,33 @@ technia:
   skin: obsidian
 ```
 and rebuild or restart the dev server
+
+## Multiple language
+1. Create directory and file `__data/language/[lang].yml`(the `[lang]` is abbreviation of your language)
+
+2. replace contents with another language, the following are the default values.
+
+```yml
+t:
+  posts: posts
+  tags_low: tags
+  tags_up: Tags
+  categories_low: categories
+  categories_up: Categories
+  about_low: about
+  about_up: About
+  search_low: search
+  search_up: Search
+  catalogue: Catalogue
+  home: Home
+  page: Page
+  post_up: Post
+  search_placeholder: "input key words here..."
+  update_time: "Update time"
+  trending_articles: Trending Articles
+  trending_tags: Trending Tags
+  show_more: show more
+  catalogue_empty: Catalogue is empty
+```
+
+and rebuild or restart the dev server
