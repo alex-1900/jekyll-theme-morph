@@ -1,5 +1,5 @@
 ---
 ---
-@import "technia/themes/{{ site.technia.skin | default: 'silver' }}";
+@import "morph/themes/{{ site.morph.skin | default: 'silver' }}";
 @import "post";
 //@import "railscasts.css";

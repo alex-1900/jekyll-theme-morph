@@ -20,13 +20,13 @@
 
 title: Your awesome title
 email: your-email@example.com
-description: the technia
-baseurl: "/technia" # the subpath of your site, e.g. /blog
+description: The morph jeykll theme
+baseurl: "/jekyll-theme-morph" # the subpath of your site, e.g. /blog
 url: "https://alex-1900.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 #domain: your-domain.com
 
 # Accounts
-github_username:  jekyll
+github_username:  alex-1900
 
 # Build settings
 #theme: minima
@@ -49,7 +49,7 @@ kramdown:
 #
 #linenos: true
 
-technia:
+morph:
   skin: silver
   pages:
     - name: tags

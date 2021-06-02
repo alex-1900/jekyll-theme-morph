@@ -6,8 +6,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Alex"]
   spec.email         = ["omytty@126.com"]
 
-  spec.summary       = %q{Technia is a minimal Jekyll theme.}
-  spec.homepage      = "https://github.com/alex-1900/technia"
+  spec.summary       = %q{Morph is a minimal Jekyll theme.}
+  spec.homepage      = "https://github.com/alex-1900/jekyll-theme-morph"
   spec.license       = "MIT"
 
   spec.files = `git ls-files -z`.split("\x0").select do |f|

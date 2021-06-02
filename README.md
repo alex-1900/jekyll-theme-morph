@@ -1,8 +1,8 @@
-# technia
+# Morph
 
-technia is a simple Jekyll theme for writers.
+Morph is a simple Jekyll theme for writers.
 
-[Demo](http://blog.technia.site/technia/)
+[Demo](http://alex-1900.github.io/jekyll-theme-morph/)
 
 ## Installation
 Install with github page:
@@ -24,7 +24,7 @@ $ bundle
 3. In `_config.yml` add these lines:
 
 ```yaml
-remote_theme: alex-1900/technia
+remote_theme: alex-1900/jekyll-theme-morph
 
 permalink: /:year/:month/:day/:title.markdown
 paginate: 5
@@ -58,7 +58,7 @@ source: categories
 
 2. add these lines to your `_config.yml`:
 ```yml
-technia:
+morph:
   pages:
     - name: tags
       path: /tags
@@ -96,9 +96,9 @@ layout: search
 ---
 ```
 
-3. add change your `_config.yml` add a new page to `technia.pages`:
+3. add change your `_config.yml` add a new page to `morph.pages`:
 ```yml
-technia:
+morph:
   pages:
     - name: tags
       path: /tags
@@ -111,7 +111,7 @@ technia:
 ## Change the skin
 There are two skins: `silver` (default) and `obsidian`, you can switching between multiple skins by `_config.yml`:
 ```yml
-technia:
+morph:
   skin: obsidian
 ```
 and rebuild or restart the dev server
