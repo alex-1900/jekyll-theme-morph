@@ -82,9 +82,14 @@ add these lines to your `_config.yml` in `morph` field:
 ```yml
 morph:
   include:
-    home_tags_bar: true
-    home_categories_bar: true
+    home_categories_bar:
+      title: Top Categories
+      path: /categories
+    home_tags_bar:
+      title: Top Tags
+      path: /tags
 ```
+certainly, you can change the `titles` and `paths`
 
 ### Add searching page
 1. create `search.json` at project root, and add these lines:

@@ -51,6 +51,13 @@ kramdown:
 
 morph:
   skin: silver
+  include:
+    home_categories_bar:
+      title: Top Categories
+      path: /categories
+    home_tags_bar:
+      title: Top Tags
+      path: /tags
   pages:
     - name: tags
       path: /tags

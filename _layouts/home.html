@@ -41,17 +41,18 @@ layout: default
             {% endif %}
 
             {% if site.tags.size > 0 and site.morph.include.home_tags_bar %}
+            {% assign home_tags_bar = site.morph.include.home_tags_bar %}
             <div class="w-100 item">
                 <h2 class="d-flex color-secondary title">
-                    <p class="flex-grow-1"><i class="fas fa-tag"></i> {{ t.top_tags | default: 'Top Tags' }}</p>
-                    <a class="fw-normal" href="{{ '/tags' | prepend: site.baseurl }}">
+                    <p class="flex-grow-1"><i class="fas fa-tag"></i> {{ home_tags_bar.title | default: 'Top Tags' }}</p>
+                    <a class="fw-normal" href="{{ home_tags_bar.path | prepend: site.baseurl }}">
                         <span style="font-size: .9rem">{{ t.show_more | default: 'show more' }} »</span>
                     </a>
                 </h2>
                 <ul class="list-container">
                     {% for tag in site.tags limit:12 %}
                     <li class="horizontal list-style-none">
-                        <a class="flat" href="{{ '/tags' | prepend: site.baseurl }}#{{ tag[0] }}">{{ tag[0] }}</a>
+                        <a class="flat" href="{{ home_tags_bar.path | prepend: site.baseurl }}#{{ tag[0] }}">{{ tag[0] }}</a>
                     </li>
                     {% endfor %}
                 </ul>
@@ -59,17 +60,18 @@ layout: default
             {% endif %}
 
             {% if site.categories.size > 0 and site.morph.include.home_categories_bar %}
+            {% assign home_categories_bar = site.morph.include.home_categories_bar %}
             <div class="w-100 item">
                 <h2 class="d-flex color-secondary title">
-                    <p class="flex-grow-1"><i class="fas fa-folder-open"></i> {{ t.top_categories | default: 'Top Categories' }}</p>
-                    <a class="fw-normal" href="{{ '/tags' | prepend: site.baseurl }}">
+                    <p class="flex-grow-1"><i class="fas fa-folder-open"></i> {{ home_categories_bar.title | default: 'Top Categories' }}</p>
+                    <a class="fw-normal" href="{{ home_categories_bar.path | prepend: site.baseurl }}">
                         <span style="font-size: .9rem">{{ t.show_more | default: 'show more' }} »</span>
                     </a>
                 </h2>
                 <ul class="list-container">
                     {% for cate in site.categories limit:10 %}
                     <li class="horizontal list-style-none">
-                        <a class="flat" href="{{ '/categories' | prepend: site.baseurl }}#{{ cate[0] }}">{{ cate[0] }}</a>
+                        <a class="flat" href="{{ home_categories_bar.path | prepend: site.baseurl }}#{{ cate[0] }}">{{ cate[0] }}</a>
                     </li>
                     {% endfor %}
                 </ul>
