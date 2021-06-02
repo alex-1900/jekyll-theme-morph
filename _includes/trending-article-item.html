@@ -1,3 +1,4 @@
+{% assign t = site.data.language[page.lang].t %}
 <li class="d-flex hover-primary" style="padding: .5rem 0">
     <div class="flex-none color-secondary" style="padding: 0 .4rem">
         {{ include.index }}.
@@ -14,11 +15,11 @@
     </div>
     <div class="flex-none d-flex flex-column justify-content-center" style="padding: 0 4px;">
         <a
-            class="d-inline-block color-secondary hover-border"
+            class="d-inline-block color-secondary-light hover-border"
             style="padding: .4rem 1rem; margin-right: 1rem"
             href="{{ post.url | prepend: site.baseurl }}"
         >
-            detail
+            {{ t.detail_up | default: 'info' }}
         </a>
     </div>
 </li>

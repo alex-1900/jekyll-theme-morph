@@ -6,6 +6,7 @@
 .page-home {
   font-size: 16px;
   .left {
+    padding: 1rem 0;
     width: 59%;
     @include media-sm() {
       width: 100%;
@@ -32,6 +33,16 @@
         &.horizontal {
           display: inline-block;
           margin-top: .5rem;
+        }
+        &:not(:last-child) {
+          border-bottom: 1px dashed $color-primary-dark;
+        }
+        @include media-sm() {
+          a.hover-border {
+            border: 1px solid darken($color-primary-dark, 3%);
+            position: relative;
+            left: 1px;
+          }
         }
         &.hover-primary:hover {
           background-color: $color-primary;

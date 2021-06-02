@@ -54,10 +54,11 @@ pre {
   padding: 0 1rem;
 }
 code.language-plaintext {
-  background-color: $color-primary-dark;
-  color: map-get($colors, 'secondary');
+  background-color: $color-primary;
+  color: $color-secondary-dark;
   font-weight: bold;
   padding: 2px 4px;
+  word-wrap:break-word;
 }
 
 .rouge-code pre {

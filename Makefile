@@ -27,7 +27,7 @@ build:
 serve:
 	$(docker_build)
 	$(docker_runner) -p $(port):$(port) -p $(liveport):$(liveport) $(docker_tag) $(jekyll_runner) serve \
--I --unpublished -l --livereload-port $(liveport) -H 0.0.0.0 -P $(port)
+-I --unpublished -l --livereload-port $(liveport) -H 0.0.0.0 -P $(port) --config _config.yml,_config_dev.yml
 
 shell:
 	@echo Container starting...

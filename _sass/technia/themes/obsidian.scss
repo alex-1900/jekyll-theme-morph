@@ -7,17 +7,17 @@ $color-primary-light: #444444 !default;
 $color-primary: #2b2b2b !default;
 $color-primary-dark: #1c1c1c !default;
 
-$color-secondary-light: #e8e8e8 !default;
-$color-secondary: #d2d2d2 !default;
-$color-secondary-dark: #b6b6b6 !default;
+$color-secondary-light: #eeeeee !default;
+$color-secondary: #c9c9c9 !default;
+$color-secondary-dark: #a8a8a8 !default;
 
 $color-link-light: #acd3ff !default;
 $color-link: #6da0e2 !default;
 $color-link-dark: #3b84ea !default;
 
-$color-rang1: #ffd191;
-$color-rang2: #c388cd;
-$color-logo: $color-link-light;
+$color-rang1: #ffd191 !default;
+$color-rang2: #cb85d7 !default;
+$color-logo: $color-link-light !default;
 
 .highlight { background: #2b2b2b; color: #f9f7f3 }
 .highlight .hll { background-color: #3a4055 }

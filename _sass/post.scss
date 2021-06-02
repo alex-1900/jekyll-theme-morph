@@ -121,7 +121,9 @@
       }
 
       blockquote {
-        color: $color-secondary-light;
+        p {
+          color: $color-secondary;
+        }
         border-left: 4px solid $color-rang1;
         padding-left: .5em;
         font-style: italic;
