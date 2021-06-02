@@ -25,6 +25,10 @@
     }
   }
 
+  .simple-post-info {
+    padding: 0 1rem;
+  }
+
   .archive-box {
     padding: 1rem 0;
     &:not(:last-child) {
@@ -32,7 +36,14 @@
     }
     .title {
       font-size: 1.3rem;
+    }
+    h3 {
       padding: .5rem 0;
+    }
+    h3, .info {
+      @include media-sm() {
+        font-size: 1.2rem;
+      }
     }
     .menu-box {
       border-left: 1px dashed $color-primary-dark;

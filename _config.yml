@@ -18,12 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
+title: Jekyll Theme Morph
 email: your-email@example.com
 description: The morph jeykll theme
 baseurl: "/jekyll-theme-morph" # the subpath of your site, e.g. /blog
 url: "https://alex-1900.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-#domain: your-domain.com
+domain: alexis-otaku.top
 
 # Accounts
 github_username:  alex-1900

@@ -66,4 +66,19 @@ layout: default
         window.scrollTo({top: 0, behavior: "smooth"})
     }
     scrollTopLg.onclick = scrollTop.onclick
+
+    function handleScrollTop() {
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+        if (scrollTop >= 200) {
+            if (scrollTopLg.style.display !== 'block') {
+                scrollTopLg.style.display = 'block'
+            }
+        } else {
+            if (scrollTopLg.style.display === 'block') {
+                scrollTopLg.style.display = 'none'
+            }
+        }
+    }
+    window.onscroll = handleScrollTop;
+    handleScrollTop();
 </script>
