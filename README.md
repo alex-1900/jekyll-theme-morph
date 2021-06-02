@@ -40,6 +40,15 @@ Remove any other `theme:` or `remote_theme:` lines.
 
 ## Layouts
 
+### Pinned articles
+Add the `sticky` and `sticky_subtitle`(optional) field to post file, and you can find the article at pinned area.
+```yml
+---
+sticky: true
+sticky_subtitle: some words
+---
+```
+
 ### Add tags and categories page
 1. create new pages `tags.html` and `categories.html` and add these lines to heads:
 ```html
@@ -138,8 +147,9 @@ t:
   post_up: Post
   search_placeholder: input key words here...
   update_time: Update time
-  trending_articles: Trending Articles
-  trending_tags: Trending Tags
+  pinned_articles: Pinned Articles
+  top_tags: Top Tags
+  top_categories: Top Categories
   show_more: show more
   catalogue_empty: Catalogue is empty
 ```

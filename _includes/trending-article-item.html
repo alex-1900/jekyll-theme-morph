@@ -6,8 +6,8 @@
     <div class="d-flex flex-column w-100">
         <div><a class="hover-color-reversal" style="line-height: 1.4rem;" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></div>
         <p class="color-secondary-light" style="padding-top: .2rem;">
-            {% if post.recommend_reason %}
-                {{ post.recommend_reason }}
+            {% if post.sticky_subtitle %}
+                {{ post.sticky_subtitle }}
             {% else %}
                 {{ post.date | date: "%b %d, %Y %H:%M" }}
             {% endif %}
