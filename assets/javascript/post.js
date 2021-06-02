@@ -28,6 +28,9 @@
 
     post.prototype.initStructure = function (structure) {
         var headers = this.getHeaders()
+        if (headers.length > 0) {
+            structure.innerText = ''
+        }
         headers.forEach(function (value) {
             structure.appendChild(createStructureItem(value))
         })
