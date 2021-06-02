@@ -136,8 +136,8 @@ t:
   home: Home
   page: Page
   post_up: Post
-  search_placeholder: "input key words here..."
-  update_time: "Update time"
+  search_placeholder: input key words here...
+  update_time: Update time
   trending_articles: Trending Articles
   trending_tags: Trending Tags
   show_more: show more
