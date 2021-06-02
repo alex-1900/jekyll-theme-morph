@@ -40,7 +40,7 @@ layout: default
             </div>
             {% endif %}
 
-            {% if site.tags.size > 0 %}
+            {% if site.tags.size > 0 and site.morph.include.home_tags_bar %}
             <div class="w-100 item">
                 <h2 class="d-flex color-secondary title">
                     <p class="flex-grow-1"><i class="fas fa-tag"></i> {{ t.top_tags | default: 'Top Tags' }}</p>
@@ -58,7 +58,7 @@ layout: default
             </div>
             {% endif %}
 
-            {% if site.categories.size > 0 %}
+            {% if site.categories.size > 0 and site.morph.include.home_categories_bar %}
             <div class="w-100 item">
                 <h2 class="d-flex color-secondary title">
                     <p class="flex-grow-1"><i class="fas fa-folder-open"></i> {{ t.top_categories | default: 'Top Categories' }}</p>

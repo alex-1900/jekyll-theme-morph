@@ -77,6 +77,15 @@ morph:
 
 and can see the `tags` and `categories` buttons now.
 
+### Enable tags and categories sidebar
+add these lines to your `_config.yml` in `morph` field:
+```yml
+morph:
+  include:
+    home_tags_bar: true
+    home_categories_bar: true
+```
+
 ### Add searching page
 1. create `search.json` at project root, and add these lines:
 ```text
