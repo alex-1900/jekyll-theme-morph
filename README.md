@@ -131,6 +131,12 @@ morph:
       path: /search
 ```
 
+### custom the article excerpt length in home page
+```yml
+morph:
+  excerpt_length: 150  # default is 200
+```
+
 ## Change the skin
 There are two skins: `silver` (default) and `obsidian`, you can switching between multiple skins by `_config.yml`:
 ```yml

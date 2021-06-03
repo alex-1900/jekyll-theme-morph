@@ -20,7 +20,8 @@
         {% if post.excerpt_separator %}
             {{ post.excerpt | strip_html }}
         {% else %}
-            {{ post.content | strip_html | truncate: 200 }}
+            {% assign excerpt_length = site.morph.excerpt_length | default: 200 %}
+            {{ post.content | strip_html | truncate: excerpt_length }}
         {% endif %}
     </p>
     <div class="categories">
