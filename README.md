@@ -166,6 +166,8 @@ t:
   top_categories: Top Categories
   show_more: show more
   catalogue_empty: Catalogue is empty
+  previous_page: Previous
+  next_page: Next
 ```
 
 3 add your the `lang` item to your page files
