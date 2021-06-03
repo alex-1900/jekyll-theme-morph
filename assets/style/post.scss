@@ -1,5 +1,5 @@
 ---
 ---
-@import "morph/themes/{{ site.morph.skin | default: 'silver' }}";
+@import "skins/{{ site.morph.skin | default: 'silver' }}";
 @import "post";
 //@import "railscasts.css";

@@ -145,6 +145,21 @@ morph:
 ```
 and rebuild or restart the dev server
 
+#### Custom skin
+create file `_sass/skink/skin_name.scss`, and enable in `_config.yml`:
+```yaml
+# _config.yml
+
+sass:
+  sass_dir:     _sass
+  style:        compressed
+
+morph:
+  skin: skin_name
+```
+
+and rebuild or restart the dev server
+
 ## Multiple language
 1. Create directory and file `__data/language/[lang].yml`(the `[lang]` is abbreviation of your language)
 
