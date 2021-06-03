@@ -34,6 +34,18 @@ layout: default
                 <article class="text">
                     {{ content }}
                 </article>
+                <div class="post-nav-bar d-flex d-sm-block">
+                    {% if page.next.url %}
+                    <a href="{{ page.next.url | prepend: site.baseurl }}" class="d-inline-block h-100 w-100 text-center">
+                        {{ t.next_page | default: 'Next' }}
+                    </a>
+                    {% endif %}
+                    {% if page.previous.url %}
+                    <a href="{{ page.previous.url | prepend: site.baseurl }}" class="d-inline-block h-100 w-100 text-center">
+                        {{ t.previous_page | default: 'Previous' }}
+                    </a>
+                    {% endif %}
+                </div>
             </section>
             <aside class="right flex-sm-none flex-none d-sm-none component catalogue">
                 <ul class="body bg-base position-sticky-top" id="structure">

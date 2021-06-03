@@ -19,3 +19,5 @@ t:
   top_categories: 热门类别
   show_more: 展示全部
   catalogue_empty: 目录是空的
+  previous_page: 前一篇
+  next_page: 后一篇

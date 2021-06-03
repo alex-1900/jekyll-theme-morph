@@ -51,6 +51,29 @@
           }
         }
       }
+
+      .post-nav-bar {
+        margin-top: 3rem;
+        min-height: 3rem;
+        //background-color: $color-primary-light;
+        a {
+          font-size: 1.1rem;
+          line-height: 3rem;
+          border: 1px dashed $color-primary-dark;
+          &:nth-child(even) {
+            border-left: 0;
+          }
+          &:hover {
+            background-color: $color-primary-light;
+          }
+          @include media-sm() {
+            &:nth-child(even) {
+              border-left: 1px dashed $color-primary-dark;
+              border-top: 0;
+            }
+          }
+        }
+      }
     }
 
     // right area
