@@ -4,4 +4,5 @@ _site
 .jekyll-metadata
 _config_dev.yml
 vendor
+.idea
 /jekyll-theme-morph-*.gem
