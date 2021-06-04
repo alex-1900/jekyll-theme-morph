@@ -2,11 +2,11 @@
 layout: page
 title: Morph | About
 permalink: /about
+bread_path: About
 ---
 {% assign t = site.data.language[page.lang].t %}
 <div style="padding-top: 2rem;">
-    {% assign paths = t.page | default: 'Page' %}
-    {% include bread-bar.html paths=paths  %}
+    {% include bread-bar.html  %}
 </div>
 
 <h1 class="color-secondary" style="padding: 2rem 0">About</h1>

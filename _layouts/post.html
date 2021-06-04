@@ -10,8 +10,8 @@ layout: default
                 <div class="status-bar d-flex position-sm-sticky bg-base">
                     <div class="h-100 flex-grow-1 d-flex flex-column justify-content-center">
                         {% assign post_up = t.post_up | default: 'Post' %}
-                        {% assign paths = page.date | date: ' %Y %m %d' | prepend: post_up %}
-                        {% include bread-bar.html paths=paths  %}
+                        {% assign bread_path = page.date | date: ' %Y %m %d' | prepend: post_up %}
+                        {% include bread-bar.html bread_path=bread_path  %}
                     </div>
                     <div class="structure-menu d-flex flex-column justify-content-center">
                         <div>

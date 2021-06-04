@@ -1,7 +1,9 @@
 {% assign t = site.data.language[page.lang].t %}
+{% assign default_path = t.page | default: 'Page' %}
+{% assign bread_path = page.bread_path | default: include.bread_path | default: default_path %}
 <div class="component bread fw-bold user-select-none">
     <span class="bg-primary"><a class="link-light" href="{{ '/' | site.baseurl }}">{{ t.home | default: 'Home' }}</a></span>
-    {% assign paths = include.paths | split: " " %}
+    {% assign paths = bread_path | split: " " %}
     {% for path in paths %}
     <i class="fas fa-angle-right color-secondary"></i>
     <span class="bg-primary color-secondary-light">{{ path }}</span>
