@@ -24,7 +24,7 @@
             <div>
                 <ul class="white-space-nowrap">
                     <li class="d-inline-block active"><a href="{{ '/' | prepend: site.baseurl }}">{{ t.posts | default: 'posts' }}</a></li>
-                    {% for _page in site.morph.pages %}
+                    {% for _page in site.morph.navigation %}
                     <li class="d-inline-block"><a href="{{ _page.path | prepend: site.baseurl }}">{{ _page.name }}</a></li>
                     {% endfor %}
                     <li class="d-inline-block"><a href="{{ '/about' | prepend: site.baseurl }}">{{ t.about_low | default: 'about' }}</a></li>

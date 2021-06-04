@@ -68,7 +68,7 @@ source: categories
 2. add these lines to your `_config.yml`:
 ```yml
 morph:
-  pages:
+  navigation:
     - name: tags
       path: /tags
     - name: categories
@@ -119,14 +119,10 @@ layout: search
 ---
 ```
 
-3. add change your `_config.yml` add a new page to `morph.pages`:
+3. add change your `_config.yml` add a new page to `morph.navigation`:
 ```yml
 morph:
-  pages:
-    - name: tags
-      path: /tags
-    - name: categories
-      path: /categories
+  navigation:
     - name: search
       path: /search
 ```

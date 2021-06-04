@@ -58,7 +58,7 @@ morph:
     home_tags_bar:
       title: Top Tags
       path: /tags
-  pages:
+  navigation:
     - name: tags
       path: /tags
     - name: categories
