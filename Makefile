@@ -20,7 +20,7 @@ endef
 
 .SILENT: .docker_build serve shell
 
-build: clear
+build:
 	$(docker_build)
 	$(docker_runner) $(docker_tag) bundle install
 
