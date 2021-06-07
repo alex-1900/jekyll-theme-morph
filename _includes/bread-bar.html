@@ -3,7 +3,7 @@
 {% assign bread_path = page.bread_path | default: include.bread_path | default: default_path %}
 <div class="component bread fw-bold user-select-none">
     <span class="bg-primary">
-        <a class="link-light" href="{{ '/' | site.baseurl }}">
+        <a class="link-light" href="{{ '/' | prepend: site.baseurl }}">
         {{ t.home | default: 'Home' }}
         </a>
     </span>
