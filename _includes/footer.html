@@ -3,5 +3,15 @@
         &copy; <time datetime="{{ site.time }}">{{ site.time | date: '%Y' }}</time>
         {{ site.domain }}, all rights reserved {{ site.github_username }}
         . Made with Jekyll using the <a target="_blank" href="https://github.com/alex-1900/jekyll-theme-morph">Morph</a> theme.
+        <br />
+        {% for footer_link in site.morph.footer_links %}
+        <a
+            class="color-secondary-light text-decoration-underline"
+            style="margin: 0 .5em;font-size: .8rem"
+            href="{{ footer_link.path | prepend: site.baseurl }}"
+        >
+            {{ footer_link.title }}
+        </a>
+        {% endfor %}
     </div>
 </footer>
