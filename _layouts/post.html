@@ -26,10 +26,18 @@ layout: default
                 </div>
                 <header>
                     <h1 class="title fw-normal">{{ page.title }}</h1>
-                    <p class="color-secondary-light">
-                        {{ t.update_time | default: 'Update time' }}:
-                        <time datetime="{{ site.time }}">{{ page.date | date: '%Y-%m-%d %H:%M' }}</time>
-                    </p>
+                    <div class="signature bg-primary-light color-secondary-light">
+                        <p>
+                            <strong>{{ t.update_time | default: 'Update time' }}:</strong>
+                            <time datetime="{{ site.time }}">{{ page.date | date: '%Y-%m-%d %H:%M' }}</time>
+                        </p>
+                        {% if page.authors %}
+                        <p>
+                            <strong>{{ t.authors_up | default: 'Authors' }}:</strong>
+                            {{ page.authors | join: ', ' }}
+                        </p>
+                        {% endif %}
+                    </div>
                 </header>
                 <article class="text">
                     {{ content }}

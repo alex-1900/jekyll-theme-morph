@@ -50,6 +50,12 @@
             font-size: 2rem;
           }
         }
+        .signature {
+          padding: 1rem;
+          font-size: .9rem;
+          border-left: 3px solid $color-link;
+          line-height: 1.5em;
+        }
       }
 
       .post-nav-bar {
