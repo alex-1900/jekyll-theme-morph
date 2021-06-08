@@ -33,12 +33,10 @@
 <link rel="stylesheet" href="{{ "/assets/style/classify.css" | relative_url }}">
 {% endif %}
 
-{% if page.script %}
-<script src="{{ page.script | relative_url }}"></script>
-{% endif %}
-
-{% if page.css %}
-<link rel="stylesheet" href="{{ page.css | relative_url }}" />
+{% if page.styles.size > 0 %}
+{% for _style in page.styles %}
+<link rel="stylesheet" href="{{ _style | relative_url }}" />
+{% endfor %}
 {% endif %}
 
 <!-- RSS -->

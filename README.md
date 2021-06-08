@@ -133,6 +133,20 @@ morph:
   excerpt_length: 150  # default is 200
 ```
 
+### custom css and javascript files
+Add front matters in your pages
+```yaml
+scripts: [
+  /assets/your-custom-script1.js,
+  /assets/your-custom-script2.js
+]
+
+styles: [
+  /assets/your-custom-stylesheet1.css,
+  /assets/your-custom-stylesheet2.css
+]
+```
+
 ## Change the skin
 There are two skins: `silver` (default) and `obsidian`, you can switching between multiple skins by `_config.yml`:
 ```yml

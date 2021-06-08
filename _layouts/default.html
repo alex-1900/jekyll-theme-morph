@@ -12,5 +12,11 @@
     {{ content }}
 
     {% include footer.html %}
+
+    {% if page.scripts.size > 0 %}
+    {% for _script in page.scripts %}
+    <script src="{{ _script | relative_url }}"></script>
+    {% endfor %}
+    {% endif %}
   </body>
 </html>
