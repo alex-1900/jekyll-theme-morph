@@ -56,9 +56,9 @@ pre {
   padding: 0 1rem;
 }
 code.language-plaintext {
+  font-family: monospace, sans-serif;
   background-color: $color-primary;
   color: $color-secondary;
-  //font-weight: bold;
   padding: 2px 4px;
   word-wrap:break-word;
 }
